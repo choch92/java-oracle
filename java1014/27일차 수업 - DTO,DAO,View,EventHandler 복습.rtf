@@ -1,0 +1,901 @@
+{\rtf1\ansi\ansicpg949\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fnil\fcharset129 NanumMyeongjo;}
+{\colortbl;\red255\green255\blue255;\red115\green158\blue202;\red204\green204\blue204;\red158\green158\blue158;
+\red193\green170\blue108;\red192\green192\blue192;\red238\green204\blue100;\red127\green0\blue85;\red0\green0\blue192;
+\red106\green62\blue62;\red100\green100\blue100;\red42\green0\blue255;\red63\green127\blue95;\red115\green158\blue202;
+\red158\green158\blue158;\red238\green204\blue100;\red202\green197\blue128;\red94\green176\blue32;\red123\green221\blue55;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c45098\c61961\c79216;\csgenericrgb\c80000\c80000\c80000;\csgenericrgb\c61961\c61961\c61961;
+\csgenericrgb\c75686\c66667\c42353;\csgenericrgb\c75294\c75294\c75294;\csgenericrgb\c93333\c80000\c39216;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c0\c0\c75294;
+\csgenericrgb\c41569\c24314\c24314;\csgenericrgb\c39216\c39216\c39216;\csgenericrgb\c16471\c0\c100000;\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c45098\c61961\c79216;
+\csgenericrgb\c61961\c61961\c61961;\csgenericrgb\c93333\c80000\c39216;\csgenericrgb\c79216\c77255\c50196;\cssrgb\c43067\c72927\c16222;\cssrgb\c54133\c87606\c27652;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14540\viewh16160\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 27\'c0\'cf\'c2\'f7(cho)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+** \'bf\'c0\'b6\'f3\'c5\'ac \'bf\'ac\'b5\'bf \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a5\
+\
+1. \'c1\'d8\'ba\'f1\
+\
+- \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'bf\'ac\'b5\'bf \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a5\'c0\'bb \'b8\'b8\'b5\'e9 \'b6\'a7\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'b5\'e5\'b6\'f3\'c0\'cc\'b9\'f6 \'c6\'c4\'c0\'cf\'c0\'cc \'c0\'d6\'be\'ee\'be\'df \'c7\'d5\'b4\'cf\'b4\'d9.\
+\
+2. \'c5\'ac\'b7\'a1\'bd\'ba \
+\
+- DTO : \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'c7 \'c7\'cf\'b3\'aa\'c0\'c7 \'c7\'e0\'c0\'bb \'c7\'a5\'c7\'f6\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d1 \'c5\'ac\'b7\'a1\'bd\'ba\
+- DAO : \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'c0\'db\'be\'f7\'c0\'bb \'c0\'a7\'c7\'d1 \'c5\'ac\'b7\'a1\'bd\'ba\
+- View : \'c8\'ad\'b8\'e9\'c0\'bb \'c0\'a7\'c7\'d1 \'c5\'ac\'b7\'a1\'bd\'ba\
+- EventHandler : View\'bf\'a1\'bc\'ad \'b9\'df\'bb\'fd\'c7\'cf\'b4\'c2 \'c0\'cc\'ba\'a5\'c6\'ae\'b8\'a6 \'c3\'b3\'b8\'ae\'c7\'cf\'b4\'c2 \'c5\'ac\'b7\'a1\'bd\'ba\
+- Main : \'bd\'c7\'c7\'e0 \'c5\'ac\'b7\'a1\'bd\'ba\
+\
+- EventHandler\'b4\'c2 Controller\'b6\'f3\'b0\'ed \'ba\'d2\'b7\'af\'b5\'b5 \'b5\'c7\'b4\'c2\'b5\'a5 \'bb\'e7\'bf\'eb\'c0\'da\'c0\'c7 \'c0\'cc\'ba\'a5\'c6\'ae\'bf\'a1 \'b5\'fb\'b6\'f3 \'c7\'ca\'bf\'e4\'c7\'d1 \'c0\'db\'be\'f7\'c0\'bb \'c8\'a3\'c3\'e2\'c7\'d8\'bc\'ad \'bc\'f6\'c7\'e0\'c7\'cf\'b4\'c2 \'c5\'ac\'b7\'a1\'bd\'ba\
+\
+3. \'c5\'d7\'c0\'cc\'ba\'ed - \'b1\'b8\'b8\'c5 \'c5\'d7\'c0\'cc\'ba\'ed\
+\
+- \'b1\'b8\'b8\'c5\'c4\'da\'b5\'e5 : \'c0\'cf\'b7\'c3\'b9\'f8\'c8\'a3, \'b1\'e2\'ba\'bb\'c5\'b0\
+- \'bb\'f3\'c7\'b0\'b8\'ed : \'b9\'ae\'c0\'da\'bf\'ad(\'c7\'d1\'b1\'db \'c6\'f7\'c7\'d4 20\'c0\'da\'c0\'cc\'b3\'bb), \'c7\'ca\'bc\'f6\'c0\'d4\'b7\'c2\
+- \'b1\'b8\'b8\'c5\'c0\'da\'be\'c6\'c0\'cc\'b5\'f0 : \'b9\'ae\'c0\'da\'bf\'ad(\'bf\'b5\'b9\'ae\'b0\'fa \'bc\'fd\'c0\'da 20\'c0\'da \'c0\'cc\'b3\'bb) \'c7\'ca\'bc\'f6 \'c0\'d4\'b7\'c2\
+- \'bc\'f6\'b7\'ae : \'c1\'a4\'bc\'f6, \'c7\'ca\'bc\'f6\'c0\'d4\'b7\'c2\
+- \'b1\'b8\'b8\'c5\'c0\'cf\'c0\'da : \'b3\'af\'c2\'a5\'b7\'ce \'b1\'e2\'ba\'bb\'b0\'aa\'c0\'ba \'c7\'f6\'c0\'e7 \'bd\'c3\'b0\'a3\
+\
+4. \'c0\'db\'be\'f7\
+\
+- \'b5\'a5\'c0\'cc\'c5\'cd \'c3\'df\'b0\'a1, \'bb\'e8\'c1\'a6, \'bc\'f6\'c1\'a4, \'c0\'fc\'c3\'bc \'c1\'b6\'c8\'b8, \'bb\'f3\'c7\'b0\'b8\'ed\'c0\'bb \'c0\'cc\'bf\'eb\'c7\'d1 \'c1\'b6\'c8\'b8\
+\
+5. \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1 \'c1\'a2\'bc\'d3\'c7\'d8\'bc\'ad \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'bb \'bb\'fd\'bc\'ba\
+\
+\'bd\'c7\'bd\'c0)\
+1. \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1 \'c1\'a2\'bc\'d3\'c7\'d8\'bc\'ad \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'bb \'bb\'fd\'bc\'ba\
+\pard\pardeftab720\partightenfactor0
+\cf2 CREATE\cf3  \cf2 TABLE\cf3  \cf4 buy(\cf0 \
+\cf3 	\cf4 buycode\cf3  \cf5 number\cf4 (\cf6 5\cf4 )\cf3  \cf2 PRIMARY\cf3  \cf2 KEY\cf4 ,\cf0 \
+\cf3 	\cf4 itemname\cf3  \cf5 varchar2\cf4 (\cf6 60\cf4 )\cf3  \cf2 NOT\cf3  \cf2 NULL\cf4 ,\cf0 \
+\cf3 	\cf4 customerid\cf3  \cf5 varchar2\cf4 (\cf6 20\cf4 )\cf3  \cf2 NOT\cf3  \cf2 NULL\cf4 ,\cf0 \
+\cf3 	\cf5 count\cf3  \cf5 number\cf4 (\cf6 5\cf4 )\cf3  \cf2 NOT\cf3  \cf2 NULL\cf4 ,\cf0 \
+\cf3 	\cf4 buydate\cf3  \cf5 DATE\cf3  \cf2 DEFAULT\cf3  \cf5 SYSDATE\cf4 )\cf7 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+2. \'c0\'cf\'b7\'c3\'b9\'f8\'c8\'a3\'b8\'a6 \'c0\'a7\'c7\'d1 sequence \'bb\'fd\'bc\'ba\
+- buyseq\'b7\'ce \'bb\'fd\'bc\'ba\'c7\'cf\'b0\'ed 1\'ba\'ce\'c5\'cd \'bd\'c3\'c0\'db\
+\pard\pardeftab720\partightenfactor0
+\cf2 CREATE\cf3  \cf2 SEQUENCE\cf3  \cf4 buyseq\cf0 \
+\cf3 	\cf2 START\cf3  \cf2 WITH\cf3  \cf6 1\cf7 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+3. Buy \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'c7 \'c7\'cf\'b3\'aa\'c0\'c7 \'c7\'e0\'c0\'bb \'c7\'a5\'c7\'f6\'c7\'d2 DTO \'c5\'ac\'b7\'a1\'bd\'ba \'b8\'b8\'b5\'e9\'b1\'e2\
+\
+1) \'c7\'c1\'b7\'ce\'c1\'a7\'c6\'ae \'bb\'fd\'bc\'ba\
+\
+2) ojdbc?.jar \'c6\'c4\'c0\'cf\'c0\'bb \'c7\'c1\'b7\'ce\'c1\'a7\'c6\'ae\'bf\'a1 \'bb\'f0\'c0\'d4\'c7\'cf\'b0\'ed build path\'bf\'a1 \'c3\'df\'b0\'a1\
+\
+3) DTO\'b7\'ce \'bb\'e7\'bf\'eb\'c7\'d2 Buy\'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'bb\'fd\'bc\'ba\
+- \'c5\'d7\'c0\'cc\'ba\'ed \'c4\'c3\'b7\'b3\'bf\'a1 \'c7\'d8\'b4\'e7\'c7\'cf\'b4\'c2 \'c7\'d7\'b8\'f1\'c0\'bb private \'ba\'af\'bc\'f6\'b7\'ce \'bb\'fd\'bc\'ba\
+- \'c1\'a2\'b1\'d9\'c0\'da \'b8\'de\'bc\'d2\'b5\'e5 \'bb\'fd\'bc\'ba\
+- toString \'c0\'e7\'c1\'a4\'c0\'c7\
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 package\cf0  domain;\
+\cf8 import\cf0  java.sql.Date;\
+\cf8 public\cf0  \cf8 class\cf0  Buy \{\
+	\cf8 private\cf0  \cf8 int\cf0  \cf9 buycode\cf0 ;\
+	\cf8 private\cf0  String \cf9 itemname\cf0 ;\
+	\cf8 private\cf0  String \cf9 customerid\cf0 ;\
+	\cf8 private\cf0  \cf8 int\cf0  \cf9 count\cf0 ;\
+	\cf8 private\cf0  Date \cf9 buydate\cf0 ;\
+	\cf8 public\cf0  \cf8 int\cf0  getBuycode() \{\cf8 return\cf0  \cf9 buycode\cf0 ;\}\
+	\cf8 public\cf0  \cf8 void\cf0  setBuycode(\cf8 int\cf0  \cf10 buycode\cf0 ) \{\cf8 this\cf0 .\cf9 buycode\cf0  = \cf10 buycode\cf0 ;\}\
+	\cf8 public\cf0  String getItemname() \{\cf8 return\cf0  \cf9 itemname\cf0 ;\}\
+	\cf8 public\cf0  \cf8 void\cf0  setItemname(String \cf10 itemname\cf0 ) \{\cf8 this\cf0 .\cf9 itemname\cf0  = \cf10 itemname\cf0 ;\}\
+	\cf8 public\cf0  String getCustomerid() \{\cf8 return\cf0  \cf9 customerid\cf0 ;\}\
+	\cf8 public\cf0  \cf8 void\cf0  setCustomerid(String \cf10 customerid\cf0 ) \{\cf8 this\cf0 .\cf9 customerid\cf0  = \cf10 customerid\cf0 ;\}\
+	\cf8 public\cf0  \cf8 int\cf0  getCount() \{\cf8 return\cf0  \cf9 count\cf0 ;\}\
+	\cf8 public\cf0  \cf8 void\cf0  setCount(\cf8 int\cf0  \cf10 count\cf0 ) \{\cf8 this\cf0 .\cf9 count\cf0  = \cf10 count\cf0 ;\}\
+	\cf8 public\cf0  Date getBuydate() \{\cf8 return\cf0  \cf9 buydate\cf0 ;\}\
+	\cf8 public\cf0  \cf8 void\cf0  setBuydate(Date \cf10 buydate\cf0 ) \{\cf8 this\cf0 .\cf9 buydate\cf0  = \cf10 buydate\cf0 ;\}\
+	\cf11 @Override\cf0 \
+	\cf8 public\cf0  String toString() \{\
+		\cf8 return\cf0  \cf12 "Buy [buycode="\cf0  + \cf9 buycode\cf0  + \cf12 ", itemname="\cf0  + \cf9 itemname\cf0  + \cf12 ", customerid="\cf0  + \cf9 customerid\cf0  + \cf12 ", count="\cf0  + \cf9 count\cf0 \
+				+ \cf12 ", buydate="\cf0  + \cf9 buydate\cf0  + \cf12 "]"\cf0 ;\
+	\}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+4. DAO \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'bb\'fd\'bc\'ba\
+\
+- 5\'b0\'b3\'c0\'c7 \'b8\'de\'bc\'d2\'b5\'e5 \'bb\'fd\'bc\'ba\
+\
+1) \'b5\'e5\'b6\'f3\'c0\'cc\'b9\'f6 \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'b7\'ce\'b5\'e5 : \'c3\'b3\'c0\'bd\'bf\'a1 1\'b9\'f8\'b8\'b8 \'bc\'f6\'c7\'e0\
+- \'c5\'ac\'b7\'a1\'bd\'ba \'b3\'bb\'ba\'ce\'bf\'a1 static \'bf\'b5\'bf\'aa\'c0\'bb \'bb\'fd\'bc\'ba\'c7\'d8\'bc\'ad \'c0\'db\'bc\'ba\
+\pard\pardeftab720\partightenfactor0
+\cf8 package\cf0  dao;\
+\cf8 public\cf0  \cf8 class\cf0  BuyDao \{\
+	\cf13 // \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'c3\'b3\'c0\'bd \'bb\'e7\'bf\'eb\'c7\'d2 \'b6\'a7 \'c7\'d1 \'b9\'f8\'b8\'b8 \'bc\'f6\'c7\'e0\'c7\'cf\'b4\'c2 \'c4\'da\'b5\'e5\cf0 \
+	\cf8 static\cf0  \{\
+		\cf8 try\cf0  \{\
+			Class.forName(\cf12 "oracle.jdbc.driver.OracleDriver"\cf0 );\
+		\}\cf8 catch\cf0 (Exception \cf10 e\cf0 ) \{\
+			System.\cf9 out\cf0 .printf(\cf12 "\'c5\'ac\'b7\'a1\'bd\'ba \'b7\'ce\'b5\'e5 \'bf\'b9\'bf\'dc : %s\\n"\cf0 , \cf10 e\cf0 .getMessage());\
+			\cf10 e\cf0 .printStackTrace();\
+		\}		\
+	\}\
+\}\
+- Main \'b9\'ae(\'c1\'a4\'bb\'f3\'c0\'db\'b5\'bf \'c7\'cf\'b4\'c2\'c1\'f6 \'c8\'ae\'c0\'ce)\
+\cf8 package\cf0  main;\
+\cf8 import\cf0  dao.BuyDao;\
+\cf8 import\cf0  domain.Buy;\
+\cf8 public\cf0  \cf8 class\cf0  Main \{\
+	\cf8 public\cf0  \cf8 static\cf0  \cf8 void\cf0  main(String[] \cf10 args\cf0 ) \{\
+		BuyDao \cf10 \ul \ulc10 dao\cf0 \ulnone  = \cf8 new\cf0  BuyDao();\
+	\}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+2) \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'c0\'db\'be\'f7\'bf\'a1 \'bb\'e7\'bf\'eb\'b5\'c7\'b4\'c2 3\'b0\'b3\'c0\'c7 \'ba\'af\'bc\'f6\'b8\'a6 \'b8\'c9\'b9\'f6 \'ba\'af\'bc\'f6\'b7\'ce \'bc\'b1\'be\'f0\
+\
+- Connection, PreparedStatement, ResultSet\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 	\cf13 // \'b5\'a5\'c0\'cc\'c5\'cd \'ba\'a3\'c0\'cc\'bd\'ba \'bf\'ac\'b5\'bf\'bf\'a1 \'c7\'ca\'bf\'e4\'c7\'d1 \'ba\'af\'bc\'f6\cf0 \
+	\cf13 // \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'bf\'ac\'b0\'e1 \'ba\'af\'bc\'f6\cf0 \
+	\cf8 private\cf0  Connection \cf9 \ul \ulc9 con\cf0 \ulnone ;\
+	\cf13 // SQL \'bd\'c7\'c7\'e0 \'ba\'af\'bc\'f6\cf0 \
+	\cf8 private\cf0  PreparedStatement \cf9 \ul \ulc9 pstmt\cf0 \ulnone ;\
+	\cf13 // select \'b1\'b8\'b9\'ae\'c0\'c7 \'b0\'e1\'b0\'fa \'bb\'e7\'bf\'eb \'ba\'af\'bc\'f6\cf0 \
+	\cf8 private\cf0  ResultSet \cf9 \ul \ulc9 rs\cf0 \ulnone ;\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+3) \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1 \'bb\'f0\'c0\'d4\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'bb\'fd\'bc\'ba\
+\
+- Class \'b9\'ae\
+\pard\pardeftab720\partightenfactor0
+\cf13 	// \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'bb\'f0\'c0\'d4\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\cf0 \
+	\cf8 public\cf0  \cf8 int\cf0  insertBuy(Buy \cf10 buy\cf0 ) \{\
+		\cf8 int\cf0  \cf10 result\cf0  = -1;\
+		\cf8 try\cf0  \{\
+			\cf9 con\cf0  = DriverManager.getConnection(\cf12 "jdbc:oracle:thin:@192.168.0.13:1521:xe"\cf0 ,\cf12 "user10"\cf0 , \cf12 "user10"\cf0 );\
+			\cf9 pstmt\cf0  = \cf9 con\cf0 .prepareStatement(\
+					\cf12 "insert into buy(buycode, itemname, customerid, count) "\cf0 \
+					\cf13 // \cf13 \ul \ulc13 buycode\cf13 \ulnone \'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1\'bc\'ad \cf13 \ul \ulc13 seq\cf13 \ulnone \'b7\'ce \'c0\'db\'bc\'ba\'c7\'cf\'bf\'a9 ? \'b4\'eb\'bd\'c5\'bf\'a1 \'be\'c6\'b7\'a1\'bf\'cd \'b0\'b0\'c0\'cc \'b3\'d6\'c0\'bd\cf0 \
+					+\cf12 "values(buyseq.nextval, ?, ?, ?)"\cf0 );\
+			\cf13 // \cf13 \ul \ulc13 sql\cf13 \ulnone  \'bf\'a1 \'b9\'b0\'c0\'bd\'c7\'a5\'b0\'a1 \'c0\'d6\'c0\'b8\'b8\'e9 \'bd\'c7\'c1\'a6 \'b5\'a5\'c0\'cc\'c5\'cd\'b7\'ce \'b9\'d9\'c0\'ce\'b5\'f9\cf0 \
+			\cf9 pstmt\cf0 .setString(1, \cf10 buy\cf0 .getItemname());\
+			\cf9 pstmt\cf0 .setString(2, \cf10 buy\cf0 .getCustomerid());\
+			\cf9 pstmt\cf0 .\ul setInt\ulnone (3, \cf10 buy\cf0 .getCount());\
+			\cf13 // \cf13 \ul \ulc13 sql\cf13 \ulnone  \'bd\'c7\'c7\'e0\cf0 \
+			\cf10 result\cf0  = \cf9 pstmt\cf0 .executeUpdate();\
+			\cf13 // \'c1\'a4\'b8\'ae\cf0 \
+			\cf9 pstmt\cf0 .close();\
+			\cf9 con\cf0 .close();\
+		\}\cf8 catch\cf0 (Exception \cf10 e\cf0 ) \{\
+			System.\cf9 out\cf0 .printf(\cf12 "\'b5\'a5\'c0\'cc\'c5\'cd \'bb\'f0\'c0\'d4 \'bf\'b9\'bf\'dc : %s\\n"\cf0 , \cf10 e\cf0 .getMessage());\
+			\cf10 e\cf0 .printStackTrace();\
+		\}\
+		\cf8 return\cf0  \cf10 result\cf0 ;\
+	\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+- Main \'b9\'ae(\'c1\'a4\'bb\'f3\'c0\'db\'b5\'bf \'c7\'cf\'b4\'c2\'c1\'f6 \'c8\'ae\'c0\'ce)\
+\pard\pardeftab720\partightenfactor0
+\cf8 package\cf0  main;\
+\cf8 import\cf0  dao.BuyDao;\
+\cf8 import\cf0  domain.Buy;\
+\cf8 public\cf0  \cf8 class\cf0  Main \{\
+	\cf8 public\cf0  \cf8 static\cf0  \cf8 void\cf0  main(String[] \cf10 args\cf0 ) \{\
+		BuyDao \cf10 dao\cf0  = \cf8 new\cf0  BuyDao();\
+		\
+		Buy \cf10 buy\cf0  = \cf8 new\cf0  Buy();\
+		\cf10 buy\cf0 .setItemname(\cf12 "\'c4\'bf\'c7\'c7"\cf0 );\
+		\cf10 buy\cf0 .setCustomerid(\cf12 "ggangpae1"\cf0 );\
+		\cf10 buy\cf0 .setCount(3);\
+		\
+		\cf8 int\cf0  \cf10 r\cf0  = \cf10 dao\cf0 .insertBuy(\cf10 buy\cf0 );\
+		\cf8 if\cf0 (\cf10 r\cf0 >0) \{\
+			System.\cf9 out\cf0 .printf(\cf12 "\'bb\'f0\'c0\'d4\'bc\'ba\'b0\'f8\\n"\cf0 );\
+		\}\cf8 else\cf0  \{\
+			System.\cf9 out\cf0 .printf(\cf12 "\'bb\'f0\'c0\'d4\'bd\'c7\'c6\'d0\\n"\cf0 );\
+		\}\
+	\}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+- DBeaver\
+\pard\pardeftab720\partightenfactor0
+\cf2 SELECT\cf3  \cf4 *\cf3  \cf2 FROM\cf3  \cf4 buy\cf7 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 1	\'c4\'bf\'c7\'c7	ggangpae1	3	2019-10-14 10:55:51\
+\
+4) \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'bc\'f6\'c1\'a4\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\
+- \'b8\'f0\'be\'e7\'c0\'ba \'bb\'f0\'c0\'d4\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\'bf\'cd \'b5\'bf\'c0\'cf\
+- \'b1\'e2\'ba\'bb\'c5\'b0\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'c1\'b6\'c8\'b8\'c7\'d8\'bc\'ad \'b3\'aa\'b8\'d3\'c1\'f6 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'bc\'f6\'c1\'a4\
+\
+- Class \'b9\'ae\
+\pard\pardeftab720\partightenfactor0
+\cf13 	// \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'bc\'f6\'c1\'a4\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\cf0 \
+	\cf8 public\cf0  \cf8 int\cf0  updateBuy(Buy \cf10 buy\cf0 ) \{\
+		\cf8 int\cf0  \cf10 result\cf0  = -1;\
+		\cf8 try\cf0  \{\
+			\cf9 con\cf0  = DriverManager.getConnection(\cf12 "jdbc:oracle:thin:@192.168.0.13:1521:xe"\cf0 ,\cf12 "user10"\cf0 , \cf12 "user10"\cf0 );\
+			\cf9 pstmt\cf0  = \cf9 con\cf0 .prepareStatement(\
+					\cf12 "update buy set itemname=?, customerid=?, count=? where buycode=?"\cf0 );\
+			\cf13 // \cf13 \ul \ulc13 sql\cf13 \ulnone  \'bf\'a1 \'b9\'b0\'c0\'bd\'c7\'a5\'b0\'a1 \'c0\'d6\'c0\'b8\'b8\'e9 \'bd\'c7\'c1\'a6 \'b5\'a5\'c0\'cc\'c5\'cd\'b7\'ce \'b9\'d9\'c0\'ce\'b5\'f9\cf0 \
+			\cf9 pstmt\cf0 .setString(1, \cf10 buy\cf0 .getItemname());\
+			\cf9 pstmt\cf0 .setString(2, \cf10 buy\cf0 .getCustomerid());\
+			\cf9 pstmt\cf0 .setInt(3, \cf10 buy\cf0 .getCount());\
+			\cf9 pstmt\cf0 .setInt(4, \cf10 buy\cf0 .getBuycode());\
+			\cf13 // \cf13 \ul \ulc13 sql\cf13 \ulnone  \'bd\'c7\'c7\'e0\cf0 \
+			\cf10 result\cf0  = \cf9 pstmt\cf0 .executeUpdate();\
+			\cf13 // \'c1\'a4\'b8\'ae\cf0 \
+			\cf9 pstmt\cf0 .close();\
+			\cf9 con\cf0 .close();\
+		\}\cf8 catch\cf0 (Exception \cf10 e\cf0 ) \{\
+			System.\cf9 out\cf0 .printf(\cf12 "\'b5\'a5\'c0\'cc\'c5\'cd \'bc\'f6\'c1\'a4 \'bf\'b9\'bf\'dc : %s\\n"\cf0 , \cf10 e\cf0 .getMessage());\
+			\cf10 e\cf0 .printStackTrace();\
+		\}\
+		\cf8 return\cf0  \cf10 result\cf0 ;\
+	\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+- Main \'b9\'ae\
+\pard\pardeftab720\partightenfactor0
+\cf8 package\cf0  main;\
+\cf8 import\cf0  dao.BuyDao;\
+\cf8 import\cf0  domain.Buy;\
+\cf8 public\cf0  \cf8 class\cf0  Main \{\
+	\cf8 public\cf0  \cf8 static\cf0  \cf8 void\cf0  main(String[] \cf10 args\cf0 ) \{\
+		BuyDao \cf10 dao\cf0  = \cf8 new\cf0  BuyDao();	\
+		Buy \cf10 buy\cf0  = \cf8 new\cf0  Buy();\
+		\cf10 buy\cf0 .setBuycode(1);\
+		\cf10 buy\cf0 .setItemname(\cf12 "\'b0\'fa\'c0\'cf"\cf0 );\
+		\cf10 buy\cf0 .setCustomerid(\cf12 "jessica72"\cf0 );\
+		\cf10 buy\cf0 .setCount(5);\
+		\
+		\cf8 int\cf0  \cf10 r\cf0  = \cf10 dao\cf0 .updateBuy(\cf10 buy\cf0 );\
+		\cf8 if\cf0 (\cf10 r\cf0 >0) \{\
+			System.\cf9 out\cf0 .printf(\cf12 "\'bc\'f6\'c1\'a4\'bc\'ba\'b0\'f8\\n"\cf0 );\
+		\}\cf8 else\cf0  \{\
+			System.\cf9 out\cf0 .printf(\cf12 "\'bc\'f6\'c1\'a4\'bd\'c7\'c6\'d0\\n"\cf0 );\
+		\}\
+	\}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+- DBeaver\
+\pard\pardeftab720\partightenfactor0
+\cf2 SELECT\cf3  \cf4 *\cf3  \cf2 FROM\cf3  \cf4 buy\cf7 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 1	\'b0\'fa\'c0\'cf	jessica72	5	2019-10-14 10:55:51\
+\
+5) \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'bb\'e8\'c1\'a6\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\
+\
+- delete form \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'cc\'b8\'a7 where \'c1\'b6\'b0\'c7\
+- \'bb\'e8\'c1\'a6\'c7\'d2 \'b6\'a7\'b4\'c2 \'b4\'eb\'ba\'ce\'ba\'d0 \'b1\'e2\'ba\'bb\'c5\'b0\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'ba\'f1\'b1\'b3\'c7\'d8\'bc\'ad \'bb\'e8\'c1\'a6\
+- \'b8\'de\'bc\'d2\'b5\'e5\'c0\'c7 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b0\'a1 \'b1\'e2\'ba\'bb\'c5\'b0\
+\
+- class \'b9\'ae\
+\pard\pardeftab720\partightenfactor0
+\cf13 	// \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'bb\'e8\'c1\'a6\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\cf0 \
+	\cf8 public\cf0  \cf8 int\cf0  deleteBuy(\cf8 int\cf0  \cf10 buycode\cf0 ) \{\
+		\cf8 int\cf0  \cf10 result\cf0  = -1;\
+		\cf8 try\cf0  \{\
+			\cf9 con\cf0  = DriverManager.getConnection(\cf12 "jdbc:oracle:thin:@192.168.0.13:1521:xe"\cf0 ,\cf12 "user10"\cf0 , \cf12 "user10"\cf0 );\
+			\cf9 pstmt\cf0  = \cf9 con\cf0 .prepareStatement(\
+					\cf12 "delete from buy where buycode=?"\cf0 );\
+			\cf13 // \cf13 \ul \ulc13 sql\cf13 \ulnone  \'bf\'a1 \'b9\'b0\'c0\'bd\'c7\'a5\'b0\'a1 \'c0\'d6\'c0\'b8\'b8\'e9 \'bd\'c7\'c1\'a6 \'b5\'a5\'c0\'cc\'c5\'cd\'b7\'ce \'b9\'d9\'c0\'ce\'b5\'f9\cf0 \
+			\cf9 pstmt\cf0 .setInt(1, \cf10 buycode\cf0 );\
+			\cf13 // \cf13 \ul \ulc13 sql\cf13 \ulnone  \'bd\'c7\'c7\'e0\cf0 \
+			\cf10 result\cf0  = \cf9 pstmt\cf0 .executeUpdate();\
+			\cf13 // \'c1\'a4\'b8\'ae\cf0 \
+			\cf9 pstmt\cf0 .close();\
+			\cf9 con\cf0 .close();\
+		\}\cf8 catch\cf0 (Exception \cf10 e\cf0 ) \{\
+			System.\cf9 out\cf0 .printf(\cf12 "\'b5\'a5\'c0\'cc\'c5\'cd \'bb\'e8\'c1\'a6 \'bf\'b9\'bf\'dc : %s\\n"\cf0 , \cf10 e\cf0 .getMessage());\
+			\cf10 e\cf0 .printStackTrace();\
+		\}\
+		\cf8 return\cf0  \cf10 result\cf0 ;\
+	\}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 - Main \'b9\'ae\
+\pard\pardeftab720\partightenfactor0
+\cf8 package\cf0  main;\
+\cf8 import\cf0  dao.BuyDao;\
+\cf8 public\cf0  \cf8 class\cf0  Main \{\
+	\cf8 public\cf0  \cf8 static\cf0  \cf8 void\cf0  main(String[] \cf10 args\cf0 ) \{\
+		BuyDao \cf10 dao\cf0  = \cf8 new\cf0  BuyDao();\
+		\cf8 int\cf0  \cf10 r\cf0  = \cf10 dao\cf0 .deleteBuy(1);\
+		\cf8 if\cf0 (\cf10 r\cf0 >0) \{\
+			System.\cf9 out\cf0 .printf(\cf12 "\'bb\'e8\'c1\'a6\'bc\'ba\'b0\'f8\\n"\cf0 );\
+		\}\cf8 else\cf0  \{\
+			System.\cf9 out\cf0 .printf(\cf12 "\'bb\'e8\'c1\'a6\'bd\'c7\'c6\'d0\\n"\cf0 );\
+		\}\
+	\}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+- DBeaver\
+\pard\pardeftab720\partightenfactor0
+\cf14 SELECT\cf3  \cf15 *\cf3  \cf14 FROM\cf3  \cf15 buy\cf16 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \'b0\'e1\'b0\'fa) \'c1\'a4\'bb\'f3\'c0\'db\'b5\'bf\'c7\'cf\'b8\'e9 \'bb\'e8\'c1\'a6\'b5\'c7\'be\'ee\'bc\'ad \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'cc \'ba\'f1\'bf\'f6\'c1\'ae\'c0\'d6\'c0\'bd.\
+\
+6) \'c0\'fc\'c3\'bc \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c1\'b6\'c8\'b8\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\
+\
+- 0\'b0\'b3 \'c0\'cc\'bb\'f3\'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c1\'b6\'c8\'b8\'c7\'cf\'b4\'c2 \'b0\'e6\'bf\'ec\'bf\'a1\'b4\'c2 \'b8\'ae\'c5\'cf \'c5\'b8\'c0\'d4\'c0\'cc List\
+- \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b4\'c2 where \'c0\'fd\'bf\'a1 \'c7\'d8\'b4\'e7\'c7\'cf\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd \
+\
+- \'c0\'cc\'b9\'f8\'bf\'a1\'b4\'c2 where \'c0\'fd\'c0\'cc \'be\'f8\'be\'ee\'bc\'ad \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b4\'c2 \'be\'f8\'c0\'bd\
+- \'c0\'fc\'c3\'bc \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c1\'b6\'c8\'b8\'c7\'cf\'b1\'e2\'c0\'a7\'c7\'d8\'bc\'ad DBeaver\'bf\'a1\'bc\'ad \'b5\'a5\'c0\'cc\'c5\'cd \'bb\'f0\'c0\'d4 \
+\pard\pardeftab720\partightenfactor0
+\cf2 INSERT\cf3  \cf2 INTO\cf3  \cf4 buy(buycode,\cf3  \cf4 itemname,\cf3  \cf4 customerid,\cf3  \cf5 count\cf4 )\cf0 \
+\cf2 VALUES\cf4 (buyseq.nextval,\cf3  \cf17 '\'bb\'f0\'b0\'e3\'bb\'ec'\cf4 ,\cf3  \cf17 'gg'\cf4 ,\cf3  \cf6 3\cf4 )\cf7 ;\cf0 \
+\cf2 INSERT\cf3  \cf2 INTO\cf3  \cf4 buy(buycode,\cf3  \cf4 itemname,\cf3  \cf4 customerid,\cf3  \cf5 count\cf4 )\cf0 \
+\cf2 VALUES\cf4 (buyseq.nextval,\cf3  \cf17 '\'b8\'f1\'bb\'ec'\cf4 ,\cf3  \cf17 'gg'\cf4 ,\cf3  \cf6 2\cf4 )\cf7 ;\cf0 \
+\cf2 INSERT\cf3  \cf2 INTO\cf3  \cf4 buy(buycode,\cf3  \cf4 itemname,\cf3  \cf4 customerid,\cf3  \cf5 count\cf4 )\cf0 \
+\cf2 VALUES\cf4 (buyseq.nextval,\cf3  \cf17 '\'b5\'c5\'c1\'f6\'b0\'a5\'ba\'f1'\cf4 ,\cf3  \cf17 'gg'\cf4 ,\cf3  \cf6 3\cf4 )\cf7 ;\cf0 \
+\
+\cf2 COMMIT\cf7 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+- Class \'b9\'ae\
+\pard\pardeftab720\partightenfactor0
+\cf13 	// \'c0\'fc\'c3\'bc \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c1\'b6\'c8\'b8\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\cf0 \
+	\cf8 public\cf0  List<Buy> getList()\{\
+		List<Buy> \cf10 list\cf0  = \cf8 new\cf0  ArrayList<>();\
+		\cf8 try\cf0  \{\
+			\cf9 con\cf0  = DriverManager.getConnection(\cf12 "jdbc:oracle:thin:@192.168.0.13:1521:xe"\cf0 ,\cf12 "user10"\cf0 , \cf12 "user10"\cf0 );\
+			\cf9 pstmt\cf0  = \cf9 con\cf0 .prepareStatement(\
+					\cf12 "select * from buy"\cf0 );\
+			\cf13 // select \'b1\'b8\'b9\'ae \'bd\'c7\'c7\'e0\cf0 \
+			\cf9 rs\cf0  = \cf9 pstmt\cf0 .executeQuery();\
+			\cf8 while\cf0 (\cf9 rs\cf0 .next()) \{\
+				Buy \cf10 buy\cf0  = \cf8 new\cf0  Buy();\
+				\cf10 buy\cf0 .setBuycode(\cf9 rs\cf0 .getInt(\cf12 "buycode"\cf0 ));\
+				\cf10 buy\cf0 .setItemname(\cf9 rs\cf0 .getString(\cf12 "itemname"\cf0 ));\
+				\cf10 buy\cf0 .setCustomerid(\cf9 rs\cf0 .getString(\cf12 "coustomerid"\cf0 ));\
+				\cf10 buy\cf0 .setCount(\cf9 rs\cf0 .getInt(\cf12 "count"\cf0 ));\
+				\cf10 buy\cf0 .setBuydate(\cf9 rs\cf0 .getDate(\cf12 "buydate"\cf0 ));\
+				\cf10 list\cf0 .add(\cf10 buy\cf0 );				\
+			\}\
+			\cf13 // \'c1\'a4\'b8\'ae\cf0 \
+			\cf9 pstmt\cf0 .close();\
+			\cf9 con\cf0 .close();\
+		\}\cf8 catch\cf0 (Exception \cf10 e\cf0 ) \{\
+			System.\cf9 out\cf0 .printf(\cf12 "\'b5\'a5\'c0\'cc\'c5\'cd \'bb\'e8\'c1\'a6 \'bf\'b9\'bf\'dc : %s\\n"\cf0 , \cf10 e\cf0 .getMessage());\
+			\cf10 e\cf0 .printStackTrace();\
+		\}\
+		\cf8 return\cf0  \cf10 list\cf0 ;\
+	\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+- Main \'b9\'ae\
+\pard\pardeftab720\partightenfactor0
+\cf8 package\cf0  main;\
+\cf8 import\cf0  dao.BuyDao;\
+\cf8 public\cf0  \cf8 class\cf0  Main \{\
+	\cf8 public\cf0  \cf8 static\cf0  \cf8 void\cf0  main(String[] \cf10 args\cf0 ) \{\
+		BuyDao \cf10 dao\cf0  = \cf8 new\cf0  BuyDao();\
+		System.\cf9 out\cf0 .printf(\cf12 "%s\\n"\cf0 , \cf10 dao\cf0 .getList());\
+	\}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\'b0\'e1\'b0\'fa)\
+\pard\pardeftab720\partightenfactor0
+\cf0 [Buy [buycode=21, itemname=\'bb\'f0\'b0\'e3\'bb\'ec, customerid=gg, count=3, buydate=2019-10-14], Buy [buycode=22, itemname=\'b8\'f1\'bb\'ec, customerid=gg, count=2, buydate=2019-10-14], Buy [buycode=23, itemname=\'b5\'c5\'c1\'f6\'b0\'a5\'ba\'f1, customerid=gg, count=3, buydate=2019-10-14]]\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+7) \'b1\'e2\'ba\'bb\'c5\'b0\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'c1\'b6\'c8\'b8\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\
+\
+- \'b1\'e2\'ba\'bb\'c5\'b0\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'c1\'b6\'c8\'b8\'c7\'cf\'b0\'d4 \'b5\'c7\'b8\'e9 \'b5\'a5\'c0\'cc\'c5\'cd\'b4\'c2 0\'b0\'b3 \'b6\'c7\'b4\'c2 1\'b0\'b3\'b8\'b8 \'c1\'b6\'c8\'b8\
+\
+- Class\'b9\'ae\
+\pard\pardeftab720\partightenfactor0
+\cf13 	// \'b1\'e2\'ba\'bb\'c5\'b0\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'c1\'b6\'c8\'b8\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\cf0 \
+	\cf8 public\cf0  Buy getBuy(\cf8 int\cf0  \cf10 buycode\cf0 ) \{\
+		Buy \cf10 buy\cf0  = \cf8 null\cf0 ;\
+		\cf8 try\cf0  \{\
+			\cf9 con\cf0  = DriverManager.getConnection(\cf12 "jdbc:oracle:thin:@192.168.0.13:1521:xe"\cf0 ,\cf12 "user10"\cf0 , \cf12 "user10"\cf0 );\
+			\cf9 pstmt\cf0  = \cf9 con\cf0 .prepareStatement(\
+					\cf12 "select * from buy where buycode=?"\cf0 );\
+			\cf9 pstmt\cf0 .setInt(1, \cf10 buycode\cf0 );\
+			\cf13 // select \'b1\'b8\'b9\'ae \'bd\'c7\'c7\'e0\cf0 \
+			\cf9 rs\cf0  = \cf9 pstmt\cf0 .executeQuery();\
+			\cf8 if\cf0 (\cf9 rs\cf0 .next()) \{\
+				\cf10 buy\cf0  = \cf8 new\cf0  Buy();\
+				\cf10 buy\cf0 .setBuycode(\cf9 rs\cf0 .getInt(\cf12 "buycode"\cf0 ));\
+				\cf10 buy\cf0 .setItemname(\cf9 rs\cf0 .getString(\cf12 "itemname"\cf0 ));\
+				\cf10 buy\cf0 .setCustomerid(\cf9 rs\cf0 .getString(\cf12 "customerid"\cf0 ));\
+				\cf10 buy\cf0 .setCount(\cf9 rs\cf0 .getInt(\cf12 "count"\cf0 ));\
+				\cf10 buy\cf0 .setBuydate(\cf9 rs\cf0 .getDate(\cf12 "buydate"\cf0 ));\
+			\}\
+			\cf13 // \'c1\'a4\'b8\'ae\cf0 \
+			\cf9 pstmt\cf0 .close();\
+			\cf9 con\cf0 .close();\
+		\}\cf8 catch\cf0 (Exception \cf10 e\cf0 ) \{\
+			System.\cf9 out\cf0 .printf(\cf12 "\'b5\'a5\'c0\'cc\'c5\'cd \'bb\'e8\'c1\'a6 \'bf\'b9\'bf\'dc : %s\\n"\cf0 , \cf10 e\cf0 .getMessage());\
+			\cf10 e\cf0 .printStackTrace();\
+		\}\
+		\cf8 return\cf0  \cf10 buy\cf0 ;\
+	\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+- Main \'b9\'ae\
+\pard\pardeftab720\partightenfactor0
+\cf8 package\cf0  main;\
+\cf8 import\cf0  dao.BuyDao;\
+\cf8 public\cf0  \cf8 class\cf0  Main \{\
+	\cf8 public\cf0  \cf8 static\cf0  \cf8 void\cf0  main(String[] \cf10 args\cf0 ) \{\
+		BuyDao \cf10 dao\cf0  = \cf8 new\cf0  BuyDao();\
+		System.\cf9 out\cf0 .printf(\cf12 "%s\\n"\cf0 , \cf10 dao\cf0 .getBuy(21));\
+	\}\
+\}\
+\
+\'b0\'e1\'b0\'fa)\
+Buy [buycode=21, itemname=\'bb\'f0\'b0\'e3\'bb\'ec, customerid=gg, count=3, buydate=2019-10-14]\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+5. \'c8\'ad\'b8\'e9 \'b9\'e8\'c4\'a1 \'b1\'b8\'bc\'ba Class\
+\pard\pardeftab720\partightenfactor0
+\cf8 package\cf0  view;\
+\cf8 import\cf0  java.awt.BorderLayout;\
+\cf8 import\cf0  java.awt.GridLayout;\
+\cf8 import\cf0  java.util.List;\
+\cf8 import\cf0  javax.swing.JButton;\
+\cf8 import\cf0  javax.swing.JFrame;\
+\cf8 import\cf0  javax.swing.JLabel;\
+\cf8 import\cf0  javax.swing.JOptionPane;\
+\cf8 import\cf0  javax.swing.JPanel;\
+\cf8 import\cf0  javax.swing.JTextField;\
+\cf8 import\cf0  dao.BuyDao;\
+\cf8 import\cf0  domain.Buy;\
+\cf8 public\cf0  \cf8 class\cf0  \ul BuyView\ulnone  \cf8 extends\cf0  JFrame \{\
+	\
+	\cf8 public\cf0  JTextField \cf9 txtItemName\cf0 , \cf9 txtCustomerId\cf0 , \cf9 txtCount\cf0 , \cf9 txtBuyDate\cf0 ;\
+	\cf8 public\cf0  JLabel \cf9 lblItemName\cf0 , \cf9 lblCustomerId\cf0 , \cf9 lblCount\cf0 , \cf9 lblBuyDate\cf0 ;\
+	\cf13 // \'b5\'a5\'c0\'cc\'c5\'cd \'c1\'b6\'c8\'b8\'b8\'a6 \'c0\'a7\'c7\'d1 \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae\cf0 \
+	\cf8 public\cf0  JButton \cf9 btnLast\cf0 , \cf9 btnPrev\cf0 , \cf9 btnNext\cf0 , \cf9 btnFirst\cf0 ;\
+	\cf8 public\cf0  JLabel \cf9 lblNum\cf0 ;\
+	\
+	\cf13 // \'b5\'a5\'c0\'cc\'c5\'cd \'c0\'db\'be\'f7\'c0\'bb \'bc\'f6\'c7\'e0\'c7\'d2 \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae\cf0 \
+	\cf8 public\cf0  JButton \cf9 btnInsert\cf0 , \cf9 btnDelete\cf0 , \cf9 btnUpdate\cf0 , \cf9 btnSearch\cf0 , \cf9 btnClear\cf0 ;\
+	\
+	\cf13 // \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c0\'fa\'c0\'e5\'c7\'d2 \'ba\'af\'bc\'f6\'b8\'a6 \'bc\'b1\'be\'f0\cf0 \
+	\cf8 public\cf0  List<Buy> \cf9 list\cf0 ;\
+	\cf13 // \'c7\'f6\'c0\'e7 \'ba\'b8\'bf\'a9\'c1\'f6\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'c0\'c7 \'c0\'ce\'b5\'a6\'bd\'ba\'b8\'a6 \'c0\'fa\'c0\'e5\'c7\'d2 \'ba\'af\'bc\'f6\cf0 \
+	\cf8 public\cf0  \cf8 int\cf0  \cf9 idx\cf0 ;\
+	\
+	\cf8 public\cf0  BuyView() \{\
+		\cf13 // 4\'c1\'d9 2\'c4\'ad\'c0\'b8\'b7\'ce \'b8\'b8\'b5\'e9\'b0\'ed \'bf\'a9\'b9\'e9\'c0\'bb \'b0\'a1\'b7\'ce 3 \'bc\'bc\'b7\'ce 3\'c0\'b8\'b7\'ce \'bc\'b3\'c1\'a4\cf0 \
+		JPanel \cf10 p1\cf0  = \cf8 new\cf0  JPanel(\cf8 new\cf0  GridLayout(4,2,3,3));\
+		\cf9 lblItemName\cf0  = \cf8 new\cf0  JLabel(\cf12 "\'be\'c6\'c0\'cc\'c5\'db\'c0\'cc\'b8\'a7"\cf0 , JLabel.\cf9 RIGHT\cf0 );\
+		\cf9 txtItemName\cf0  = \cf8 new\cf0  JTextField();\
+		\cf9 lblCustomerId\cf0  = \cf8 new\cf0  JLabel(\cf12 "\'b1\'b8\'b8\'c5\'c0\'da\'be\'c6\'c0\'cc\'b5\'f0"\cf0 , JLabel.\cf9 RIGHT\cf0 );\
+		\cf9 txtCustomerId\cf0  = \cf8 new\cf0  JTextField();\
+		\cf9 lblCount\cf0  = \cf8 new\cf0  JLabel(\cf12 "\'b1\'b8\'b8\'c5\'bc\'f6\'b7\'ae"\cf0 , JLabel.\cf9 RIGHT\cf0 );\
+		\cf9 txtCount\cf0  = \cf8 new\cf0  JTextField();\
+		\cf9 lblBuyDate\cf0  = \cf8 new\cf0  JLabel(\cf12 "\'b1\'b8\'b8\'c5\'b3\'af\'c2\'a5"\cf0 , JLabel.\cf9 RIGHT\cf0 );\
+		\cf9 txtBuyDate\cf0  = \cf8 new\cf0  JTextField();\
+\cf9 		txtBuyDate\cf0 .setEditable(\cf8 false\cf0 );\
+		\cf10 p1\cf0 .add(\cf9 lblItemName\cf0 );\
+		\cf10 p1\cf0 .add(\cf9 txtItemName\cf0 );\
+		\cf10 p1\cf0 .add(\cf9 lblCustomerId\cf0 );\
+		\cf10 p1\cf0 .add(\cf9 txtCustomerId\cf0 );\
+		\cf10 p1\cf0 .add(\cf9 lblCount\cf0 );\
+		\cf10 p1\cf0 .add(\cf9 txtCount\cf0 );\
+		\cf10 p1\cf0 .add(\cf9 lblBuyDate\cf0 );\
+		\cf10 p1\cf0 .add(\cf9 txtBuyDate\cf0 );\
+		\
+		JPanel \cf10 centerPanel\cf0  = \cf8 new\cf0  JPanel();\
+		\cf10 centerPanel\cf0 .setLayout(\cf8 new\cf0  BorderLayout());\
+		\cf10 centerPanel\cf0 .add(\cf12 "Center"\cf0 , \cf10 p1\cf0 );\
+		\
+		\cf9 btnNext\cf0  = \cf8 new\cf0  JButton(\cf12 "\'b4\'d9\'c0\'bd"\cf0 );\
+		\cf9 btnPrev\cf0  = \cf8 new\cf0  JButton(\cf12 "\'c0\'cc\'c0\'fc"\cf0 );\
+		\cf9 btnFirst\cf0  = \cf8 new\cf0  JButton(\cf12 "\'c3\'b3\'c0\'bd"\cf0 );\
+		\cf9 btnLast\cf0  = \cf8 new\cf0  JButton(\cf12 "\'b3\'a1"\cf0 );\
+		\cf9 lblNum\cf0  = \cf8 new\cf0  JLabel(\cf12 ""\cf0 , JLabel.\cf9 CENTER\cf0 );\
+		\
+		JPanel \cf10 p2\cf0  = \cf8 new\cf0  JPanel();\
+		\cf10 p2\cf0 .setLayout(\cf8 new\cf0  GridLayout(1,5,3,3));\
+		\cf10 p2\cf0 .add(\cf9 btnFirst\cf0 );\
+		\cf10 p2\cf0 .add(\cf9 btnPrev\cf0 );\
+		\cf10 p2\cf0 .add(\cf9 lblNum\cf0 );\
+		\cf10 p2\cf0 .add(\cf9 btnNext\cf0 );\
+		\cf10 p2\cf0 .add(\cf9 btnLast\cf0 );\
+		\cf10 centerPanel\cf0 .add(\cf12 "South"\cf0 , \cf10 p2\cf0 );\
+		add(\cf10 centerPanel\cf0 );\
+		\
+		\cf9 btnInsert\cf0  = \cf8 new\cf0  JButton(\cf12 "\'bb\'f0\'c0\'d4"\cf0 );\
+		\cf9 btnDelete\cf0  = \cf8 new\cf0  JButton(\cf12 "\'bb\'e8\'c1\'a6"\cf0 );\
+		\cf9 btnUpdate\cf0  = \cf8 new\cf0  JButton(\cf12 "\'bc\'f6\'c1\'a4"\cf0 );\
+		\cf9 btnSearch\cf0  = \cf8 new\cf0  JButton(\cf12 "\'c1\'b6\'c8\'b8"\cf0 );\
+		\cf9 btnClear\cf0  = \cf8 new\cf0  JButton(\cf12 "\'c1\'f6\'bf\'f2"\cf0 );\
+		\
+		JPanel \cf10 southPanel\cf0  = \cf8 new\cf0  JPanel();\
+		\cf10 southPanel\cf0 .setLayout(\cf8 new\cf0  GridLayout(1,5,3,3));\
+		\cf10 southPanel\cf0 .add(\cf9 btnInsert\cf0 );\
+		\cf10 southPanel\cf0 .add(\cf9 btnDelete\cf0 );\
+		\cf10 southPanel\cf0 .add(\cf9 btnUpdate\cf0 );\
+		\cf10 southPanel\cf0 .add(\cf9 btnSearch\cf0 );\
+		\cf10 southPanel\cf0 .add(\cf9 btnClear\cf0 );\
+		add(\cf12 "South"\cf0 ,\cf10 southPanel\cf0 );\
+\
+		setTitle(\cf12 "\'b1\'b8\'b8\'c5"\cf0 );\
+		\cf13 // \'c0\'a7\'c4\'a1\'bf\'cd \'c5\'a9\'b1\'e2\'b8\'a6 \'c7\'d1\'b9\'f8\'bf\'a1 \'bc\'b3\'c1\'a4\cf0 \
+		setBounds(200,100,400,400);\
+		\cf13 // \'c1\'be\'b7\'e1 \'b1\'e2\'b4\'c9 \'ba\'ce\'bf\'a9\cf0 \
+		\cf8 this\cf0 .setDefaultCloseOperation(\cf9 EXIT_ON_CLOSE\cf0 );\
+		setResizable(\cf8 false\cf0 );\
+		setVisible(\cf8 true\cf0 );\
+		\
+		\cf13 // \'c0\'fc\'c3\'bc \'b5\'a5\'c0\'cc\'c5\'cd \'b0\'a1\'c1\'ae\'bf\'cd\'bc\'ad list\'bf\'a1 \'c0\'fa\'c0\'e5\cf0 \
+		BuyDao \cf10 dao\cf0  = \cf8 new\cf0  BuyDao();\
+		\cf9 list\cf0  = \cf10 dao\cf0 .getList();\
+		\cf13 // \'b5\'a5\'c0\'cc\'c5\'cd \'c3\'e2\'b7\'c2\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5 \'c8\'a3\'c3\'e2\cf0 \
+		display();\
+	\}\
+	\
+	\cf13 // list\'bf\'a1\'bc\'ad \cf13 \ul \ulc13 idx\cf13 \ulnone \'b9\'f8\'c2\'b0 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'a1\'c1\'ae\'bf\'cd\'bc\'ad \'c8\'ad\'b8\'e9\'bf\'a1 \'c3\'e2\'b7\'c2\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\cf0 \
+	\cf8 public\cf0  \cf8 void\cf0  display() \{\
+		\cf13 // \'b9\'e8\'bf\'ad\'c0\'cc\'b3\'aa List\'bf\'a1\'bc\'ad \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b2\'a8\'b3\'be \'b6\'a7 ArrayIndexOutOfBoundsException\'bf\'a1 \'c1\'d6\'c0\'c7\cf0 \
+		\cf8 if\cf0 (\cf9 list\cf0  == \cf8 null\cf0  || \cf9 list\cf0 .size() == 0) \{\
+			JOptionPane.showMessageDialog(\cf8 null\cf0 , \cf12 "\'c3\'e2\'b7\'c2\'c7\'d2 \'b5\'a5\'c0\'cc\'c5\'cd\'b0\'a1 \'be\'f8\'bd\'c0\'b4\'cf\'b4\'d9."\cf0 );\
+			\cf8 return\cf0 ;\
+		\}\
+		Buy \cf10 buy\cf0  = \cf9 list\cf0 .get(\cf9 idx\cf0 );\
+		\cf8 this\cf0 .\cf9 txtItemName\cf0 .setText(\cf10 buy\cf0 .getItemname());\
+		\cf8 this\cf0 .\cf9 txtCustomerId\cf0 .setText(\cf10 buy\cf0 .getCustomerid());\
+		\cf13 // \'bc\'fd\'c0\'da\'b3\'aa \'b3\'af\'c2\'a5\'b4\'c2 \'b9\'ae\'c0\'da\'bf\'ad\'b7\'ce \'ba\'af\'c8\'af\'c7\'d8\'bc\'ad \'c3\'e2\'b7\'c2\cf0 \
+		\cf13 // \'b9\'ae\'c0\'da\'bf\'ad\'c0\'cc \'b5\'e9\'be\'ee\'b0\'a1\'be\'df\'b5\'c7\'b4\'c2\'b5\'a5 \'bc\'fd\'c0\'da\'bf\'a9\'bc\'ad \'bc\'fd\'c0\'da + ""(\'b9\'ae\'c0\'da)\'b7\'ce \'c7\'d8\'bc\'ad \'b9\'ae\'c0\'da\'bf\'ad \'bb\'fd\'bc\'ba\cf0 \
+		String \cf10 disp\cf0  = String.format(\cf12 "%d\'b0\'b3"\cf0 , \cf10 buy\cf0 .getCount());\
+		\cf8 this\cf0 .\cf9 txtCount\cf0 .setText(\cf10 disp\cf0 );\
+		\cf13 // this.txtCount.setText(buy.getCount() + "");\cf0 \
+		\cf13 // \'b3\'af\'c2\'a5\'b4\'c2 toString()\'c0\'bb \'ba\'d9\'bf\'a9\'c1\'d6\'b8\'e9 \'b9\'ae\'c0\'da\'bf\'ad\'b7\'ce \'ba\'af\'b0\'e6\'b5\'ca\cf0 \
+		\cf8 this\cf0 .\cf9 txtBuyDate\cf0 .setText(\cf10 buy\cf0 .getBuydate().toString());\
+		\cf8 this\cf0 .\cf9 lblNum\cf0 .setText((\cf9 idx\cf0 +1)+\cf12 ""\cf0 );\
+	\}\
+\}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+6. View\'b0\'a1 \'c8\'ad\'b8\'e9\'bf\'a1 \'c3\'e2\'b7\'c2\'b5\'c9 \'b6\'a7 \'c0\'fc\'c3\'bc \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'a1\'c1\'ae\'bf\'cd\'bc\'ad \'c3\'b9\'b9\'f8\'c2\'b0 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c8\'ad\'b8\'e9\'bf\'a1 \'c3\'e2\'b7\'c2(\'c0\'a7\'bf\'a1 \'bc\'d2\'bd\'ba\'bf\'a1 \'c6\'f7\'c7\'d4\'b5\'c7\'be\'ee \'c0\'d6\'c0\'bd)\
+\
+1) \'b5\'a5\'c0\'cc\'c5\'cd \'c0\'fc\'c3\'bc\'b8\'a6 \'c0\'fa\'c0\'e5\'c7\'d2 List\'b8\'a6 \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba\'b7\'ce \'bc\'b1\'be\'f0\
+\pard\pardeftab720\partightenfactor0
+\cf8 public\cf0  List<Buy> \cf9 list\cf0 ;\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 2) \'c7\'f6\'c0\'e7 \'ba\'b8\'bf\'a9\'c1\'f6\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'c0\'c7 \'c0\'ce\'b5\'a6\'bd\'ba\'b8\'a6 \'c0\'fa\'c0\'e5\'c7\'d2 \'ba\'af\'bc\'f6\
+\pard\pardeftab720\partightenfactor0
+\cf8 public\cf0  \cf8 int\cf0  \cf9 idx\cf0 ;\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 3) \'bb\'fd\'bc\'ba\'c0\'da\'bf\'a1\'bc\'ad Dao\'c0\'c7 \'c0\'fc\'c3\'bc \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'a1\'c1\'ae\'bf\'cd\'bc\'ad List\'bf\'a1 \'c0\'fa\'c0\'e5\'c7\'cf\'b4\'c2 \'c4\'da\'b5\'e5\'b8\'a6 \'c3\'df\'b0\'a1\
+\pard\pardeftab720\partightenfactor0
+\cf13 // \'c0\'fc\'c3\'bc \'b5\'a5\'c0\'cc\'c5\'cd \'b0\'a1\'c1\'ae\'bf\'cd\'bc\'ad list\'bf\'a1 \'c0\'fa\'c0\'e5\cf0 \
+BuyDao \cf10 dao\cf0  = \cf8 new\cf0  BuyDao();\
+\pard\pardeftab720\partightenfactor0
+\cf9 list\cf0  = \cf10 dao\cf0 .getList();\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 4) List\'bf\'a1\'bc\'ad idx\'b9\'f8\'c2\'b0 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c3\'e2\'b7\'c2\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'bb\'fd\'bc\'ba\
+\pard\pardeftab720\partightenfactor0
+\cf13 	// list\'bf\'a1\'bc\'ad \cf13 \ul \ulc13 idx\cf13 \ulnone \'b9\'f8\'c2\'b0 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'a1\'c1\'ae\'bf\'cd\'bc\'ad \'c8\'ad\'b8\'e9\'bf\'a1 \'c3\'e2\'b7\'c2\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\cf0 \
+	\cf8 public\cf0  \cf8 void\cf0  display() \{\
+		\cf13 // \'b9\'e8\'bf\'ad\'c0\'cc\'b3\'aa List\'bf\'a1\'bc\'ad \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b2\'a8\'b3\'be \'b6\'a7 ArrayIndexOutOfBoundsException\'bf\'a1 \'c1\'d6\'c0\'c7\cf0 \
+		\cf8 if\cf0 (\cf9 list\cf0  == \cf8 null\cf0  || \cf9 list\cf0 .size() == 0) \{\
+			JOptionPane.showMessageDialog(\cf8 null\cf0 , \cf12 "\'c3\'e2\'b7\'c2\'c7\'d2 \'b5\'a5\'c0\'cc\'c5\'cd\'b0\'a1 \'be\'f8\'bd\'c0\'b4\'cf\'b4\'d9."\cf0 );\
+			\cf8 return\cf0 ;\
+		\}\
+		Buy \cf10 buy\cf0  = \cf9 list\cf0 .get(\cf9 idx\cf0 );\
+		\cf8 this\cf0 .\cf9 txtItemName\cf0 .setText(\cf10 buy\cf0 .getItemname());\
+		\cf8 this\cf0 .\cf9 txtCustomerId\cf0 .setText(\cf10 buy\cf0 .getCustomerid());\
+		\cf13 // \'bc\'fd\'c0\'da\'b3\'aa \'b3\'af\'c2\'a5\'b4\'c2 \'b9\'ae\'c0\'da\'bf\'ad\'b7\'ce \'ba\'af\'c8\'af\'c7\'d8\'bc\'ad \'c3\'e2\'b7\'c2\cf0 \
+		\cf13 // \'b9\'ae\'c0\'da\'bf\'ad\'c0\'cc \'b5\'e9\'be\'ee\'b0\'a1\'be\'df\'b5\'c7\'b4\'c2\'b5\'a5 \'bc\'fd\'c0\'da\'bf\'a9\'bc\'ad \'bc\'fd\'c0\'da + ""(\'b9\'ae\'c0\'da)\'b7\'ce \'c7\'d8\'bc\'ad \'b9\'ae\'c0\'da\'bf\'ad \'bb\'fd\'bc\'ba\cf0 \
+		String \cf10 disp\cf0  = String.format(\cf12 "%d\'b0\'b3"\cf0 , \cf10 buy\cf0 .getCount());\
+		\cf8 this\cf0 .\cf9 txtCount\cf0 .setText(\cf10 disp\cf0 );\
+		\cf13 // this.txtCount.setText(buy.getCount() + "");\cf0 \
+		\cf13 // \'b3\'af\'c2\'a5\'b4\'c2 toString()\'c0\'bb \'ba\'d9\'bf\'a9\'c1\'d6\'b8\'e9 \'b9\'ae\'c0\'da\'bf\'ad\'b7\'ce \'ba\'af\'b0\'e6\'b5\'ca\cf0 \
+		\cf8 this\cf0 .\cf9 txtBuyDate\cf0 .setText(\cf10 buy\cf0 .getBuydate().toString());\
+		\cf8 this\cf0 .\cf9 lblNum\cf0 .setText((\cf9 idx\cf0 +1)+\cf12 ""\cf0 );\
+	\}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 5) \'bb\'fd\'bc\'ba\'c0\'da\'bf\'a1\'bc\'ad \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c3\'e2\'b7\'c2\'c7\'cf\'b4\'c2 display()\'b8\'a6 \'c8\'a3\'c3\'e2\
+\pard\pardeftab720\partightenfactor0
+\cf0 display();\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+7. \'b5\'a5\'c0\'cc\'c5\'cd \'c1\'b6\'c8\'b8 \'b9\'f6\'c6\'b0\'b5\'e9\'c0\'c7 \'c0\'cc\'ba\'a5\'c6\'ae\'c3\'b3\'b8\'ae\
+\
+- java\'c0\'c7 swing \'b0\'fa AWT\'b4\'c2 \'c0\'cc\'ba\'a5\'c6\'ae \'c3\'b3\'b8\'ae\'b8\'a6 Delegate(\'c0\'a7\'c0\'d3) \'c6\'d0\'c5\'cf\'c0\'b8\'b7\'ce \'c3\'b3\'b8\'ae\'c7\'d5\'b4\'cf\'b4\'d9.\
+- \'c0\'cc\'ba\'a5\'c6\'ae\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'d1 \'ba\'e4\'b0\'a1 \'c3\'b3\'b8\'ae\'c7\'cf\'c1\'f6 \'be\'ca\'b0\'ed \'c0\'cc\'ba\'a5\'c6\'ae\'b8\'a6 \'c3\'b3\'b8\'ae\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\'b8\'a6 \'bc\'d2\'c0\'af\'c7\'d1 \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 \
+\'b1\'b8\'c7\'f6\'c7\'d1 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b0\'b4\'c3\'bc\'bf\'a1\'b0\'d4 \'c0\'a7\'c0\'d3\'c7\'cf\'b4\'c2 \'b9\'e6\'bd\'c4\'c0\'d4\'b4\'cf\'b4\'d9.\
+- \'be\'c8\'b5\'e5\'b7\'ce\'c0\'cc\'b5\'e5\'b5\'b5 \'ba\'e4\'b5\'e9\'c0\'ba \'c0\'cc \'b9\'e6\'bd\'c4\'c0\'b8\'b7\'ce \'c0\'cc\'ba\'a5\'c6\'ae\'b8\'a6 \'c3\'b3\'b8\'ae\'c7\'cf\'b4\'c2 \'b0\'e6\'bf\'ec\'b0\'a1 \'b8\'b9\'bd\'c0\'b4\'cf\'b4\'d9.\
+\
+=> View.add\'c0\'cc\'ba\'a5\'c6\'aeListener(\'c0\'cc\'ba\'a5\'c6\'aeListener \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 implements \'c7\'d1 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b0\'b4\'c3\'bc\'b8\'a6 \'b4\'eb\'c0\'d4)\
+=> \'b9\'f6\'c6\'b0\'c5\'ac\'b8\'af\'c0\'ba ActionListener\'b0\'a1 \'c3\'b3\'b8\'ae\
+=> \'c0\'af\'bb\'e7\'c7\'d1 \'bf\'aa\'c7\'d2\'c0\'bb \'c7\'cf\'b4\'c2 \'c0\'cc\'ba\'a5\'c6\'ae\'b5\'e9\'c0\'bb \'c7\'cf\'b3\'aa\'c0\'c7 \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1\'bc\'ad \'c3\'b3\'b8\'ae\'c7\'cf\'b5\'b5\'b7\'cf \'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'bb \'c0\'cc\'ba\'a5\'c6\'ae \'b6\'f3\'bf\'ec\'c6\'c3\'c0\'cc\'b6\'f3\'b0\'ed\'c7\'d5\'b4\'cf\'b4\'d9.\
+=> \'c0\'cc\'ba\'a5\'c6\'ae \'c3\'b3\'b8\'ae\'c7\'d8\'c1\'d6\'b4\'c2 \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'c0\'cf\'b9\'dd \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a1\'b9\'d6\'bf\'a1\'bc\'ad\'b4\'c2 EventHandler\'b6\'f3\'b0\'ed \'c7\'cf\'b0\'ed\
+\'c0\'a5 \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a1\'b9\'d6\'bf\'a1\'bc\'ad\'b4\'c2 Controller\'b6\'f3\'b0\'ed \'b8\'b9\'c0\'cc \'ba\'ce\'b8\'a8\'b4\'cf\'b4\'d9.\
+\
+=> \'c0\'cc\'ba\'a5\'c6\'ae \'c3\'b3\'b8\'ae\'c7\'cf\'b4\'c2 \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 EventHandler\'b7\'ce \'ba\'b0\'b5\'b5\'b7\'ce \'bb\'fd\'bc\'ba\'c7\'d8\'bc\'ad View \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c1\'b6\'c0\'db\'c7\'cf\'b7\'c1\'b0\'ed \'c7\'d5\'b4\'cf\'b4\'d9.\
+\
+\'b5\'bf\'c0\'cf\'c7\'d1 \'c5\'ac\'b7\'a1\'bd\'ba \'be\'c8\'bf\'a1\'bc\'ad \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'f8\'c0\'af : static \'ba\'af\'bc\'f6\'b8\'a6 \'bb\'fd\'bc\'ba\
+\
+\'bc\'ad\'b7\'ce \'b4\'d9\'b8\'a5 \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1\'bc\'ad \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'f8\'c0\'af\
+=> \'bb\'e7\'bf\'eb\'c7\'d2\'b7\'c1\'b0\'ed \'c7\'cf\'b4\'c2 \'c2\'ca\'c0\'b8\'b7\'ce \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b3\'d1\'b0\'dc\'c1\'d6\'b4\'c2 \'b9\'e6\'b9\'fd\
+=> public \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'b8\'b8\'b5\'e9\'b0\'ed \'b1\'d7 \'be\'c8\'bf\'a1 static \'ba\'af\'bc\'f6\'b8\'a6 \'bb\'fd\'bc\'ba - \'c1\'c1\'c1\'f6 \'be\'ca\'c0\'ba \'b9\'e6\'b9\'fd\'c0\'b8\'b7\'ce \'c3\'eb\'b1\'de\
+\
+1) ActionListener\'b8\'a6 \'c3\'b3\'b8\'ae\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'c2 \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'bb\'fd\'bc\'ba\
+- ActionListener \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba\'b8\'a6 \'b1\'b8\'c7\'f6(implements)\'c7\'cf\'b4\'c2 \'c5\'ac\'b7\'a1\'bd\'ba\'b7\'ce \'bb\'fd\'bc\'ba\
+- BuyEventHandler \'c5\'ac\'b7\'a1\'bd\'ba\
+\
+2) BuyEventHandler \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1\'bc\'ad BuyView \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c1\'b6\'c0\'db\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d1 \'c0\'db\'be\'f7\
+- BuyView \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'c0\'da\'b7\'e1\'c7\'fc\'c0\'b8\'b7\'ce \'c7\'cf\'b4\'c2 \'ba\'af\'bc\'f6\'b8\'a6 \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba \'ba\'af\'bc\'f6\'b7\'ce \'bc\'b1\'be\'f0\
+\cf18 BuyView buyView;\cf0 \
+\
+- BuyView\'b8\'a6 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b7\'ce \'b9\'de\'b4\'c2 \'bb\'fd\'bc\'ba\'c0\'da\'b8\'a6 \'b8\'b8\'b5\'e9\'be\'ee\'bc\'ad \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'c0\'c7 \'b0\'aa\'c0\'bb \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba \'ba\'af\'bc\'f6\'bf\'a1 \'b4\'eb\'c0\'d4\
+- \'c0\'da\'b5\'bf \'bb\'fd\'bc\'ba \'b8\'de\'b4\'ba\'b0\'a1 \'c0\'d6\'c0\'b8\'b9\'c7\'b7\'ce \'c0\'da\'b5\'bf \'bb\'fd\'bc\'ba \'b8\'de\'b4\'ba\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'cc \'c6\'ed\'b8\'ae\
+\
+\cf19 package service;\
+import java.awt.event.ActionEvent;\
+import java.awt.event.ActionListener;\
+import view.BuyView;\
+public class BuyEventHandler implements ActionListener \{\
+	BuyView buyView;\
+	\
+	public BuyEventHandler(BuyView buyView) \{\
+		super();\
+		// \'ba\'af\'bc\'f6\'b4\'c2 \'be\'c6\'b9\'ab\'b7\'b1 \'b1\'e2\'c8\'a3\'b0\'a1 \'ba\'d9\'c1\'f6 \'be\'ca\'c0\'b8\'b8\'e9 \'b0\'a1\'b1\'ee\'bf\'ee \'b0\'f7\'bf\'a1\'bc\'ad \'b8\'b8\'b5\'e9\'be\'ee\'c1\'f8 \'b0\'cd\'c0\'bb \'bb\'e7\'bf\'eb\
+		// this.\'c0\'bb \'ba\'d9\'c0\'cc\'b8\'e9 \'b8\'de\'bc\'d2\'b5\'e5 \'bf\'dc\'ba\'ce\'bf\'a1\'bc\'ad \'c3\'a3\'be\'c6\'bc\'ad \'bb\'e7\'bf\'eb\
+		// super.\'c0\'bb \'ba\'d9\'c0\'cc\'b8\'e9 \'bb\'f3\'c0\'a7 \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1\'bc\'ad \'c3\'a3\'be\'c6\'bc\'ad \'bb\'e7\'bf\'eb\
+		this.buyView = buyView;\
+	\}\
+	// \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'a9\'b8\'a3\'b0\'c5\'b3\'aa \'c5\'d8\'bd\'ba\'c6\'ae \'c7\'ca\'b5\'e5\'bf\'a1\'bc\'ad Enter \'c5\'b0\'b8\'a6 \'b4\'a9\'b8\'a6 \'b6\'a7 \'c3\'b3\'b8\'ae\'b8\'a6 \'c0\'a7\'c7\'d1 \'b8\'de\'bc\'d2\'b5\'e5\
+	@Override\
+	public void actionPerformed(ActionEvent e) \{\
+		\
+\
+	\}\
+\}\cf0 \
+\
+3) \'b9\'f6\'c6\'b0 \'c5\'ac\'b8\'af \'b8\'de\'bc\'d2\'b5\'e5 \'b1\'b8\'c7\'f6\
+\
+- Delegate \'c6\'d0\'c5\'cf\'c0\'b8\'b7\'ce \'b8\'b8\'b5\'e9\'be\'ee\'c1\'f8 \'c0\'cc\'ba\'a5\'c6\'ae \'c3\'b3\'b8\'ae \'b8\'de\'bc\'d2\'b5\'e5 \'b5\'e9\'c0\'ba \'b9\'dd\'b5\'e5\'bd\'c3 \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'c0\'cc\'ba\'a5\'c6\'ae\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'d1 \'b0\'b4\'c3\'bc\'b8\'a6\
+\'c3\'a3\'c0\'bb \'bc\'f6 \'c0\'d6\'b5\'b5\'b7\'cf \'c7\'d8\'c1\'dd\'b4\'cf\'b4\'d9.\
+\
+- \'b8\'c5\'b0\'b3\'ba\'af\'bc\'f6\'b0\'a1 View \'c7\'fc\'c5\'c2\'c0\'cc\'b8\'e9 \'c0\'cc View\'b0\'a1 \'c0\'cc\'ba\'a5\'c6\'ae\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'d1 \'b0\'b4\'c3\'bc\'c0\'cc\'b0\'ed View\'b0\'a1 \'be\'c6\'b4\'cf\'b8\'e9\
+\'b8\'c5\'b0\'b3 \'ba\'af\'bc\'f6 \'b3\'bb\'c0\'c7 \'be\'ee\'b6\'b2 \'bc\'d3\'bc\'ba\'c0\'cc\'b3\'aa \'b8\'de\'bc\'d2\'b5\'e5\'b0\'a1 View\'b8\'a6 \'b8\'ae\'c5\'cf\'c7\'d8\'c1\'dd\'b4\'cf\'b4\'d9.\
+\
+\cf19 package service;\
+import java.awt.event.ActionEvent;\
+import java.awt.event.ActionListener;\
+import javax.swing.JOptionPane;\
+import view.BuyView;\
+public class BuyEventHandler implements ActionListener \{\
+	BuyView buyView;\
+	\
+	public BuyEventHandler(BuyView buyView) \{\
+		super();\
+		// \'ba\'af\'bc\'f6\'b4\'c2 \'be\'c6\'b9\'ab\'b7\'b1 \'b1\'e2\'c8\'a3\'b0\'a1 \'ba\'d9\'c1\'f6 \'be\'ca\'c0\'b8\'b8\'e9 \'b0\'a1\'b1\'ee\'bf\'ee \'b0\'f7\'bf\'a1\'bc\'ad \'b8\'b8\'b5\'e9\'be\'ee\'c1\'f8 \'b0\'cd\'c0\'bb \'bb\'e7\'bf\'eb\
+		// this.\'c0\'bb \'ba\'d9\'c0\'cc\'b8\'e9 \'b8\'de\'bc\'d2\'b5\'e5 \'bf\'dc\'ba\'ce\'bf\'a1\'bc\'ad \'c3\'a3\'be\'c6\'bc\'ad \'bb\'e7\'bf\'eb\
+		// super.\'c0\'bb \'ba\'d9\'c0\'cc\'b8\'e9 \'bb\'f3\'c0\'a7 \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1\'bc\'ad \'c3\'a3\'be\'c6\'bc\'ad \'bb\'e7\'bf\'eb\
+		this.buyView = buyView;\
+	\}\
+	// \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'a9\'b8\'a3\'b0\'c5\'b3\'aa \'c5\'d8\'bd\'ba\'c6\'ae \'c7\'ca\'b5\'e5\'bf\'a1\'bc\'ad Enter \'c5\'b0\'b8\'a6 \'b4\'a9\'b8\'a6 \'b6\'a7 \'c3\'b3\'b8\'ae\'b8\'a6 \'c0\'a7\'c7\'d1 \'b8\'de\'bc\'d2\'b5\'e5\
+	@Override\
+	public void actionPerformed(ActionEvent e) \{\
+		switch(e.getActionCommand()) \{\
+		\cf8 case\cf0  \cf12 "\'c3\'b3\'c0\'bd"\cf0 :\
+\pard\pardeftab720\partightenfactor0
+\cf0 			\cf8 if\cf0 (\cf9 buyView\cf0 .\cf9 idx\cf0  == 0) \{\
+				JOptionPane.showMessageDialog(\cf8 null\cf0 , \cf12 "\'c3\'b9\'b9\'f8\'c2\'b0 \'b5\'a5\'c0\'cc\'c5\'cd\'c0\'d4\'b4\'cf\'b4\'d9."\cf0 );\
+				\cf8 return\cf0 ;\
+			\}\
+			\cf9 buyView\cf0 .\cf9 idx\cf0  = 0;\
+			\cf9 buyView\cf0 .display();\
+			\cf8 break\cf0 ;\
+		\cf8 case\cf0  \cf12 "\'c0\'cc\'c0\'fc"\cf0 :\
+			\cf13 // \'c3\'b9\'b9\'f8\'c2\'b0 \'b5\'a5\'c0\'cc\'c5\'cd\'c0\'cc\'b8\'e9 \'b8\'b6\'c1\'f6\'b8\'b7\'c0\'b8\'b7\'ce \'ba\'af\'b0\'e6\cf0 \
+			\cf8 if\cf0 (\cf9 buyView\cf0 .\cf9 idx\cf0  == 0) \{\
+				\cf9 buyView\cf0 .\cf9 idx\cf0  = \cf9 buyView\cf0 .\cf9 list\cf0 .size() - 1;\
+			\}\cf8 else\cf0  \{\
+				\cf9 buyView\cf0 .\cf9 idx\cf0  = \cf9 buyView\cf0 .\cf9 idx\cf0  - 1;\
+			\}\
+			\cf9 buyView\cf0 .display();\
+			\cf8 break\cf0 ;\
+		\cf8 case\cf0  \cf12 "\'b4\'d9\'c0\'bd"\cf0 :\
+			\cf8 if\cf0 (\cf9 buyView\cf0 .\cf9 idx\cf0  == \cf9 buyView\cf0 .\cf9 list\cf0 .size() - 1)\{\
+				\cf9 buyView\cf0 .\cf9 idx\cf0  = 0;\
+			\}\cf8 else\cf0  \{\
+				\cf9 buyView\cf0 .\cf9 idx\cf0  = \cf9 buyView\cf0 .\cf9 idx\cf0  + 1;\
+			\}\
+			\cf9 buyView\cf0 .display();\
+			\cf8 break\cf0 ;\
+		\cf8 case\cf0  \cf12 "\'b3\'a1"\cf0  :\
+			\cf8 if\cf0 (\cf9 buyView\cf0 .\cf9 idx\cf0  == \cf9 buyView\cf0 .\cf9 list\cf0 .size() - 1) \{\
+				JOptionPane.showMessageDialog(\cf8 null\cf0 , \cf12 "\'b8\'b6\'c1\'f6\'b8\'b7 \'b5\'a5\'c0\'cc\'c5\'cd\'c0\'d4\'b4\'cf\'b4\'d9."\cf0 );\
+				\cf8 return\cf0 ;\
+			\}\
+			\cf9 buyView\cf0 .\cf9 idx\cf0  = \cf9 buyView\cf0 .\cf9 list\cf0 .size() - 1;\
+			\cf9 buyView\cf0 .display();\
+			\cf8 break\cf0 ;\cf19 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf19 		\}\
+	\}\
+\}\
+\cf0 \
+4) BuyView \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'bb\'fd\'bc\'ba\'c0\'da\'bf\'a1\'bc\'ad \'b9\'f6\'c6\'b0\'c0\'c7 \'c5\'ac\'b8\'af\'c0\'cc\'ba\'a5\'c6\'ae\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'cf\'b8\'e9 EventHandler \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b0\'b4\'c3\'bc\'b0\'a1 \'c3\'b3\'b8\'ae\'c7\'cf\'b5\'b5\'b7\'cf \'bf\'ac\'b0\'e1\
+\
+- BuyView Class \'bf\'a1\'bc\'ad lblNum \'c1\'d9\'b0\'fa JPanel p2 \'bb\'e7\'c0\'cc\'c2\'eb\'bf\'a1 \'bc\'d2\'bd\'ba\'b8\'a6 \'b3\'d6\'be\'ee\'be\'df \'c7\'d4\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 BuyEventHandler \cf10 eventhandler\cf0  = \cf8 new\cf0  BuyEventHandler(\cf8 this\cf0 );\
+\pard\pardeftab720\partightenfactor0
+\cf9 btnNext\cf0 .addActionListener(\cf10 eventhandler\cf0 );\
+\cf9 btnPrev\cf0 .addActionListener(\cf10 eventhandler\cf0 );\
+\cf9 btnFirst\cf0 .addActionListener(\cf10 eventhandler\cf0 );\
+\cf9 btnLast\cf0 .addActionListener(\cf10 eventhandler\cf0 );\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+5) BuyView \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'bb\'fd\'bc\'ba\'c0\'da\'bf\'a1\'bc\'ad \'b9\'f6\'c6\'b0\'c0\'c7 \'c5\'ac\'b8\'af\'c0\'cc\'ba\'a5\'c6\'ae\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'cf\'b8\'e9 EventHandler \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b0\'b4\'c3\'bc\'b0\'a1 \'c3\'b3\'b8\'ae\'c7\'cf\'b5\'b5\'b7\'cf \'bf\'ac\'b0\'e1\
+\
+- BuyView Class \'bf\'a1\'bc\'ad btnClear \'c1\'d9\'b0\'fa JPanel southPanel \'bb\'e7\'c0\'cc\'c2\'eb\'bf\'a1 \'bc\'d2\'bd\'ba\'b8\'a6 \'b3\'d6\'be\'ee\'be\'df \'c7\'d4.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 btnInsert\cf0 .addActionListener(\cf10 eventhandler\cf0 );\
+\cf9 btnDelete\cf0 .addActionListener(\cf10 eventhandler\cf0 );\
+\cf9 btnUpdate\cf0 .addActionListener(\cf10 eventhandler\cf0 );\
+\cf9 btnSearch\cf0 .addActionListener(\ul eventhandler\ulnone );\
+\cf9 btnClear\cf0 .addActionListener(\cf10 eventhandler\cf0 );\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+6) EventHandler \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b9\'f6\'c6\'b0\'c0\'bb \'c5\'ac\'b8\'af\'c7\'df\'c0\'bb \'b6\'a7 \'c8\'a3\'c3\'e2\'b5\'c7\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\'bf\'a1 \'bb\'e8\'c1\'a6 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'ad\'b7\'b6\'c0\'bb \'b6\'a7\'c0\'c7 \'c3\'b3\'b8\'ae\'b8\'a6 \'c0\'a7\'c7\'d1 \'c4\'da\'b5\'e5\'b8\'a6 \'c3\'df\'b0\'a1\
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 case\cf0  \cf12 "\'bb\'e8\'c1\'a6"\cf0 :\
+	\cf8 int\cf0  \cf10 result\cf0  = JOptionPane.showConfirmDialog(\cf8 null\cf0 , \cf12 "\'c1\'a4\'b8\'bb\'b7\'ce \'bb\'e8\'c1\'a6?"\cf0 , \cf12 "\'bb\'e8\'c1\'a6"\cf0 , JOptionPane.\cf9 YES_NO_OPTION\cf0 );\
+	\cf8 if\cf0 (\cf10 result\cf0  == JOptionPane.\cf9 YES_OPTION\cf0 ) \{\
+		\cf13 // \'c7\'f6\'c0\'e7 \'b5\'a5\'c0\'cc\'c5\'cd \'b0\'a1\'c1\'ae\'bf\'c0\'b1\'e2\cf0 \
+		Buy \cf10 buy\cf0  = \cf9 buyView\cf0 .\cf9 list\cf0 .get(\cf9 buyView\cf0 .\cf9 idx\cf0 );\
+		\cf13 // \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1\'bc\'ad \'bb\'e8\'c1\'a6\cf0 \
+		BuyDao \cf10 dao\cf0  = \cf8 new\cf0  BuyDao();\
+		\cf10 dao\cf0 .deleteBuy(\cf10 buy\cf0 .getBuycode());\
+		\cf13 // \'b8\'de\'b8\'f0\'b8\'ae\'bf\'a1\'bc\'ad \'bb\'e8\'c1\'a6\cf0 \
+		\cf9 buyView\cf0 .\cf9 list\cf0 .remove(\cf9 buyView\cf0 .\cf9 idx\cf0 );\
+		\cf13 // \cf13 \ul \ulc13 idx\cf13 \ulnone \'b8\'a6 \'c1\'b6\'c1\'a4\'c7\'cf\'b0\'ed \'b4\'d9\'bd\'c3 \'c3\'e2\'b7\'c2\cf0 \
+		\cf9 buyView\cf0 .\cf9 idx\cf0  = 0;\
+		\cf9 buyView\cf0 .display();\
+	\}\
+	\cf8 break\cf0 ;\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+** \'ba\'f1 \'bf\'ac\'b0\'e1\'c7\'fc \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'bb\'e7\'bf\'eb\
+\
+- \'c7\'d1 \'b0\'f7\'bf\'a1\'bc\'ad\'b8\'b8 \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'be\'d6\'c7\'c3\'b8\'ae\'c4\'c9\'c0\'cc\'bc\'c7\'c0\'c7 \'b0\'e6\'bf\'ec \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1 \'bb\'f0\'c0\'d4, \'bb\'e8\'c1\'a6, \'b0\'bb\'bd\'c5 \'c0\'db\'be\'f7\'c0\'bb \'c7\'d2 \'b6\'a7 \'c0\'db\'be\'f7\'c0\'bb \'c7\'cf\'b0\'ed\
+\'b8\'c5\'b9\'f8 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b4\'d9\'bd\'c3 \'b0\'a1\'c1\'ae\'bf\'c0\'b4\'c2 \'b0\'cd\'c0\'ba \'c0\'da\'bf\'f8\'c0\'c7 \'b3\'b6\'ba\'f1\'b0\'a1 \'b5\'c9 \'bc\'f6 \'c0\'d6\'bd\'c0\'b4\'cf\'b4\'d9.\
+- \'c0\'cc\'b7\'b1 \'b0\'e6\'bf\'ec\'bf\'a1\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1 \'c0\'db\'be\'f7\'c0\'bb \'c7\'cf\'b0\'ed \'c0\'da\'bd\'c5\'c0\'c7 \'b8\'de\'b8\'f0\'b8\'ae\'bf\'a1 \'c0\'d6\'b4\'c2 \'ba\'af\'bc\'f6\'bf\'a1\'b5\'b5 \'b5\'bf\'c0\'cf\'c7\'d1 \'c0\'db\'be\'f7\'c0\'bb \'bc\'f6\'c7\'e0\'c7\'cf\'b0\'ed \'b4\'d9\'bd\'c3 \'c3\'e2\'b7\'c2\'c7\'cf\'b4\'c2 \'b9\'e6\'b9\'fd\'c0\'bb\
+\'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'bd\'c0\'b4\'cf\'b4\'d9.\
+- \'c0\'cc\'b7\'b1 \'c7\'fc\'c5\'c2\'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'bb\'e7\'bf\'eb\'b9\'e6\'b9\'fd\'c0\'bb \'ba\'f1 \'bf\'ac\'b0\'e1\'c7\'fc \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'bb\'e7\'bf\'eb\'c0\'cc\'b6\'f3\'b0\'ed \'c7\'d5\'b4\'cf\'b4\'d9.\
+- \'b8\'de\'b8\'f0 \'be\'db\'c0\'cc\'b3\'aa \'b8\'de\'c0\'cf \'b5\'ee\'c0\'bb \'ba\'b8\'bf\'a9\'c1\'d6\'b4\'c2 \'be\'db\'c3\'b3\'b7\'b3 \'c0\'da\'bd\'c5\'b8\'b8\'c0\'cc \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'b0\'a1\'c1\'f6\'b0\'ed \'c0\'db\'be\'f7\'c0\'bb \'c7\'cf\'b4\'c2 \'be\'db\'bf\'a1 \'c0\'cc \'b9\'e6\'b9\'fd\'c0\'bb \'c0\'fb\'bf\'eb\'c7\'cf\'b8\'e9\
+\'c6\'ae\'b7\'a1\'c7\'c8\'c0\'bb \'b8\'b9\'c0\'cc \'c1\'d9\'c0\'cf \'bc\'f6 \'c0\'d6\'bd\'c0\'b4\'cf\'b4\'d9.\
+\
+\
+\
+7) BuyView \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'bb\'fd\'bc\'ba\'c0\'da\'bf\'a1\'bc\'ad txtCount\'bf\'a1 \'bc\'fd\'c0\'da\'b8\'b8 \'c0\'d4\'b7\'c2\'c7\'d2 \'bc\'f6 \'c0\'d6\'b5\'b5\'b7\'cf \'c5\'b0\'ba\'b8\'b5\'e5 \'c0\'cc\'ba\'a5\'c6\'ae \'c3\'b3\'b8\'ae\'c7\'cf\'b4\'c2 \'c4\'da\'b5\'e5\'b8\'a6 \'c3\'df\'b0\'a1\
+\
+- BuyView Class\'b9\'ae\
+\pard\pardeftab720\partightenfactor0
+\cf9 txtCount\cf0  = \cf8 new\cf0  JTextField();\
+\cf9 txtCount\cf0 .addKeyListener(\cf8 new\cf0  KeyListener() \{\
+	\cf11 @Override\cf0 \
+	\cf8 public\cf0  \cf8 void\cf0  keyTyped(KeyEvent \cf10 e\cf0 ) \{\}\
+	\cf11 @Override\cf0 \
+	\cf8 public\cf0  \cf8 void\cf0  keyPressed(KeyEvent \cf10 e\cf0 ) \{\}\
+	\cf11 @Override\cf0 \
+	\cf8 public\cf0  \cf8 void\cf0  keyReleased(KeyEvent \cf10 e\cf0 ) \{\
+		\cf13 // 0\'bf\'a1\'bc\'ad 9\'bb\'e7\'c0\'cc\'c0\'c7 \'c5\'b0\'b0\'a1 \'be\'c6\'b4\'d1 \'b0\'cd\'c0\'bb \'b4\'a9\'b8\'a3\'b8\'e9 \cf0 \
+		\cf8 if\cf0 (\cf10 e\cf0 .getKeyCode() < KeyEvent.\cf9 VK_0\cf0  || \cf10 e\cf0 .getKeyCode() > KeyEvent.\cf9 VK_9\cf0 ) \{\
+			String \cf10 imsi\cf0  = \cf12 ""\cf0 ;\
+			\cf8 int\cf0  \cf10 len\cf0  = \cf9 txtCount\cf0 .getText().length();\
+			\cf8 for\cf0 (\cf8 int\cf0  \cf10 i\cf0 =0; \cf10 i\cf0 <\cf10 len\cf0 -1; \cf10 i\cf0 =\cf10 i\cf0 +1) \{\
+				\cf8 char\cf0  \cf10 ch\cf0  = \cf9 txtCount\cf0 .getText().charAt(\cf10 i\cf0 );\
+				\cf10 imsi\cf0  = \cf10 imsi\cf0  + \cf10 ch\cf0 ;\
+			\}\
+			\cf9 txtCount\cf0 .setText(\cf10 imsi\cf0 );\
+		\}\
+	\}		\
+\});\
+\cf9 lblBuyDate\cf0  = \cf8 new\cf0  JLabel(\cf12 "\'b1\'b8\'b8\'c5\'b3\'af\'c2\'a5"\cf0 , JLabel.\cf9 RIGHT\cf0 );\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+- BuyEventHandler Class \'b9\'ae\
+\pard\pardeftab720\partightenfactor0
+\cf8 case\cf0  \cf12 "\'bc\'f6\'c1\'a4"\cf0 :\
+	\cf13 // \'c0\'d4\'b7\'c2\'c7\'d1 \'b3\'bb\'bf\'eb \'b0\'a1\'c1\'ae\'bf\'c0\'b1\'e2\cf0 \
+	Buy \cf10 buy\cf0  = \cf8 new\cf0  Buy();\
+	\cf13 // \'c7\'f6\'c0\'e7 \'b5\'a5\'c0\'cc\'c5\'cd\'c0\'c7 \cf13 \ul \ulc13 buycode\cf13 \ulnone \'b8\'a6 \'b0\'a1\'c1\'ae\'bf\'cd\'bc\'ad \'bc\'b3\'c1\'a4\cf0 \
+	\cf10 buy\cf0 .setBuycode(\cf9 buyView\cf0 .\cf9 list\cf0 .get(\cf9 buyView\cf0 .\cf9 idx\cf0 ).getBuycode());\
+		String \cf10 itemname\cf0  = \cf9 buyView\cf0 .\cf9 txtItemName\cf0 .getText().trim();\
+	\cf8 if\cf0 (\cf10 itemname\cf0 .length() < 1) \{\
+		JOptionPane.showMessageDialog(\cf8 null\cf0 , \cf12 "\'be\'c6\'c0\'cc\'c5\'db \'c0\'cc\'b8\'a7\'c0\'ba \'c7\'ca\'bc\'f6 \'c0\'d4\'b7\'c2"\cf0 );\
+		\cf8 return\cf0 ;\
+	\}\
+	\cf10 buy\cf0 .\ul setItemname\ulnone (\cf10 itemname\cf0 );\
+		String \cf10 customerid\cf0  = \cf9 buyView\cf0 .\cf9 txtCustomerId\cf0 .getText().trim();\
+	\cf8 if\cf0 (\cf10 customerid\cf0 .length() < 1) \{\
+		JOptionPane.showMessageDialog(\cf8 null\cf0 , \cf12 "ID\'b4\'c2 \'c7\'ca\'bc\'f6 \'c0\'d4\'b7\'c2"\cf0 );\
+		\cf8 return\cf0 ;\
+	\}\
+	\cf10 buy\cf0 .setCustomerid(\cf10 customerid\cf0 );\
+		String \cf10 count\cf0  = \cf9 buyView\cf0 .\cf9 txtCount\cf0 .getText().trim();\
+	\cf13 // 3\'b0\'b3 \'c0\'cc\'b7\'b1\'bd\'c4\'c0\'b8\'b7\'ce \'c0\'d4\'b7\'c2\'c7\'cf\'b8\'e9 \cf13 \ul \ulc13 nuber\cf13 \ulnone ...error\'b0\'a1 \'b6\'e1\'b4\'d9.\cf0 \
+	\cf13 // \'b1\'d7\'b7\'a1\'bc\'ad \'b9\'ae\'c0\'da\'bf\'ad\'bf\'a1\'bc\'ad \'b0\'a2\'b0\'a2\'c0\'c7 \'b1\'db\'c0\'da\'b8\'a6 \'b0\'a1\'c1\'ae\'bf\'cd\'bc\'ad \'bc\'fd\'c0\'da\'c0\'cc\'b8\'e9 \cf13 \ul \ulc13 imsi\cf13 \ulnone \'bf\'a1 \'b4\'f5\'c7\'d8\'c1\'d6\'b0\'ed \'bc\'fd\'c0\'da\'b0\'a1 \'be\'c6\'b4\'cf\'b8\'e9 \'c1\'df\'b4\'dc\cf0 \
+	\cf8 int\cf0  \cf10 len\cf0  = \cf10 count\cf0 .length();\
+	String \cf10 imsi\cf0  = \cf12 ""\cf0 ;\
+	\cf8 for\cf0 (\cf8 int\cf0  \cf10 i\cf0 =0; \cf10 i\cf0 <\cf10 len\cf0 ; \cf10 i\cf0 =\cf10 i\cf0 +1) \{\
+		\cf8 char\cf0  \cf10 ch\cf0  = \cf10 count\cf0 .charAt(\cf10 i\cf0 );\
+		\cf8 if\cf0 (\cf10 ch\cf0 >= \cf12 '0'\cf0  && \cf10 ch\cf0 <= \cf12 '9'\cf0 ) \{\
+			\cf10 imsi\cf0  = \cf10 imsi\cf0  + \cf10 ch\cf0 ;\
+		\}\cf8 else\cf0 \
+			\cf8 break\cf0 ;\
+	\}\
+	\cf8 if\cf0 (\cf10 imsi\cf0 .length()==0) \{\
+		\cf10 imsi\cf0  = \cf12 "0"\cf0 ;\
+	\}\
+	\cf10 buy\cf0 .setCount(Integer.parseInt(\cf10 imsi\cf0 ));\
+\cf8 	int\cf0  \cf10 r\cf0  = JOptionPane.showConfirmDialog(\cf8 null\cf0 , \cf12 "\'c1\'a4\'b8\'bb\'b7\'ce \'bc\'f6\'c1\'a4?"\cf0 , \cf12 "\'bc\'f6\'c1\'a4"\cf0 , JOptionPane.\cf9 YES_NO_OPTION\cf0 );\
+	\cf8 if\cf0 (\cf10 r\cf0 ==JOptionPane.\cf9 YES_OPTION\cf0 ) \{\
+		BuyDao \cf10 dao\cf0  = \cf8 new\cf0  BuyDao();\
+		\cf10 dao\cf0 .updateBuy(\cf10 buy\cf0 );\
+		\cf13 // \'b5\'a5\'c0\'cc\'c5\'cd \'b4\'d9\'bd\'c3 \'ba\'d2\'b7\'af\'bf\'c0\'b1\'e2\cf0 \
+		\cf9 buyView\cf0 .\cf9 list\cf0  = \cf10 dao\cf0 .getList();\
+		\cf9 buyView\cf0 .display();\
+	\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+8) \'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'ad\'b7\'b6\'c0\'bb \'b6\'a7 \'c3\'b3\'b8\'ae\'c7\'cf\'b4\'c2 \'c4\'da\'b5\'e5\'b8\'a6 \'c3\'df\'b0\'a1\
+\
+- \'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'a9\'b8\'a3\'b8\'e9 \'bb\'f0\'c0\'d4 \'b9\'f6\'c5\'cf\'b0\'fa \'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'b8\'b8 \'c8\'b0\'bc\'ba\'c8\'ad\'c7\'cf\'b0\'ed \'b3\'aa\'b8\'d3\'c1\'f6 \'b9\'f6\'c6\'b0\'c0\'ba \'ba\'f1\'c8\'b0\'bc\'ba\'c8\'ad\
+- \'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'a9\'b8\'a3\'b8\'e9 \'c5\'d8\'bd\'ba\'c6\'ae \'c7\'ca\'b5\'e5\'b5\'e9\'c0\'c7 \'b3\'bb\'bf\'eb\'c0\'bb \'bb\'e8\'c1\'a6\
+- \'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'c0\'c7 \'c5\'d8\'bd\'ba\'c6\'ae\'b8\'a6 \'c3\'eb\'bc\'d2\'b7\'ce \'ba\'af\'b0\'e6\
+- \'c3\'eb\'bc\'d2\'b7\'ce \'c5\'d8\'bd\'ba\'c6\'ae\'b0\'a1 \'ba\'af\'b0\'e6\'b5\'c8 \'b0\'e6\'bf\'ec\'bf\'a1\'b4\'c2 \'c3\'eb\'bc\'d2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'a9\'b8\'a3\'b8\'e9 \'b4\'d9\'bd\'c3 \'c0\'fc\'c3\'bc \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'a1\'c1\'ae\'bf\'cd\'bc\'ad \'c3\'b9\'b9\'f8\'c2\'b0 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c3\'e2\'b7\'c2\
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 case\cf0  \cf12 "\'c1\'f6\'bf\'f2"\cf0 :\
+	\cf9 buyView\cf0 .\cf9 btnDelete\cf0 .setEnabled(\cf8 false\cf0 );\
+	\cf9 buyView\cf0 .\cf9 btnUpdate\cf0 .setEnabled(\cf8 false\cf0 );\
+	\cf9 buyView\cf0 .\cf9 btnSearch\cf0 .setEnabled(\cf8 false\cf0 );\
+	\cf13 // txtField \'c1\'f6\'bf\'ec\'b4\'c2 \'b9\'e6\'b9\'fd ""\cf0 \
+	\cf9 buyView\cf0 .\cf9 txtItemName\cf0 .setText(\cf12 ""\cf0 );\
+	\cf9 buyView\cf0 .\cf9 txtCustomerId\cf0 .setText(\cf12 ""\cf0 );\
+	\cf9 buyView\cf0 .\cf9 txtCount\cf0 .setText(\cf12 ""\cf0 );\
+	\cf9 buyView\cf0 .\cf9 txtBuyDate\cf0 .setText(\cf12 ""\cf0 );\
+	\cf13 // \'c0\'da\'bd\'c5\'c0\'c7 \'c5\'d8\'bd\'ba\'c6\'ae\'b8\'a6 \'ba\'af\'b0\'e6 - \'c5\'e4\'b1\'db \'b9\'f6\'c6\'b0\'c0\'b8\'b7\'ce \'bb\'e7\'bf\'eb\cf0 \
+	\cf9 buyView\cf0 .\cf9 btnClear\cf0 .setText(\cf12 "\'c3\'eb\'bc\'d2"\cf0 );\
+	\
+	\cf8 break\cf0 ;\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+9) \'c3\'eb\'bc\'d2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'ad\'b7\'b6\'c0\'bb \'b6\'a7 \'c3\'b3\'b8\'ae\'c7\'cf\'b4\'c2 \'c4\'da\'b5\'e5\'b8\'a6 \'c3\'df\'b0\'a1\
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 case\cf0  \cf12 "\'c3\'eb\'bc\'d2"\cf0 :\
+	\cf9 buyView\cf0 .\cf9 btnDelete\cf0 .setEnabled(\cf8 true\cf0 );\
+	\cf9 buyView\cf0 .\cf9 btnUpdate\cf0 .setEnabled(\cf8 true\cf0 );\
+	\cf9 buyView\cf0 .\cf9 btnSearch\cf0 .setEnabled(\cf8 true\cf0 );\
+	\cf9 buyView\cf0 .\cf9 btnClear\cf0 .setText(\cf12 "\'c1\'f6\'bf\'f2"\cf0 );\
+	\cf9 buyView\cf0 .display();\
+	\cf8 break\cf0 ;\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 ** \'c0\'a7\'bf\'cd \'b0\'b0\'c0\'ba \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a5\'c0\'bb \'b1\'b8\'c7\'f6\
+\
+- \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'bf\'aa\'c7\'d2 \'ba\'b0\'b7\'ce \'b8\'b8\'b5\'e5\'b4\'c2 \'bf\'ac\'bd\'c0\
+DTO, DAO(\'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'c0\'db\'be\'f7), EventHandler(Controller-\'bf\'ac\'b0\'e1, Service-\'be\'cb\'b0\'ed\'b8\'ae\'c1\'f2\'c3\'b3\'b8\'ae), View(\'c8\'ad\'b8\'e9), Main\
+- \'c0\'cc\'b7\'b8\'b0\'d4 \'c5\'ac\'b7\'a1\'bd\'ba\'b8\'a6 \'bf\'aa\'c7\'d2 \'ba\'b0\'b7\'ce \'ba\'d0\'b8\'ae\'c7\'d8\'bc\'ad \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a1\'b9\'d6\'c7\'cf\'b4\'c2 \'b9\'e6\'bd\'c4\'c0\'bb MVC(Model, View, Controller) Pattern \'c0\'cc\'b6\'f3\'b0\'ed \'c7\'d5\'b4\'cf\'b4\'d9.\
+- MVC \'c6\'d0\'c5\'cf\'c0\'bb \'c0\'fb\'bf\'eb\'c7\'d8\'bc\'ad \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a1\'b9\'d6\'c0\'bb \'c7\'cf\'b8\'e9 \'b8\'b8\'b5\'e9\'b1\'e2\'b4\'c2 \'be\'ee\'b7\'c6\'c1\'f6\'b8\'b8 \'c0\'af\'c1\'f6\'ba\'b8\'bc\'f6\'b0\'a1 \'bc\'f6\'bf\'f9\'c7\'d8 \'c1\'fd\'b4\'cf\'b4\'d9.}
