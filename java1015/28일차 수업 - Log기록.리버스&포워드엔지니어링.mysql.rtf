@@ -1,0 +1,670 @@
+{\rtf1\ansi\ansicpg949\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fnil\fcharset129 NanumMyeongjo;\f1\fnil\fcharset129 NanumMyeongjoBold;}
+{\colortbl;\red255\green255\blue255;\red63\green127\blue95;\red127\green0\blue85;\red0\green0\blue192;
+\red42\green0\blue255;\red106\green62\blue62;\red102\green151\blue104;\red115\green158\blue202;\red204\green204\blue204;
+\red158\green158\blue158;\red238\green204\blue100;\red193\green170\blue108;\red192\green192\blue192;\red202\green197\blue128;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c0\c0\c75294;
+\csgenericrgb\c16471\c0\c100000;\csgenericrgb\c41569\c24314\c24314;\csgenericrgb\c40000\c59216\c40784;\csgenericrgb\c45098\c61961\c79216;\csgenericrgb\c80000\c80000\c80000;
+\csgenericrgb\c61961\c61961\c61961;\csgenericrgb\c93333\c80000\c39216;\csgenericrgb\c75686\c66667\c42353;\csgenericrgb\c75294\c75294\c75294;\csgenericrgb\c79216\c77255\c50196;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13020\viewh13940\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 28\'c0\'cf\'c2\'f7(cho)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+** \'c7\'f6\'c0\'e7 \'c0\'db\'be\'f7 \'c1\'df\'c0\'ce \'c5\'ac\'b7\'a1\'bd\'ba\
+\
+Buy \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'bb \'bb\'fd\'bc\'ba\
+Buy \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1 \'c0\'fa\'c0\'e5\'b5\'c8 \'b5\'a5\'c0\'cc\'c5\'cd\'c0\'c7 \'c7\'a5\'c7\'f6\'c7\'d2 \'c5\'ac\'b7\'a1\'bd\'ba(DTO, VO) : Buy\
+Buy \'c5\'d7\'c0\'cc\'ba\'ed\'b0\'fa \'bf\'ac\'b5\'bf\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d1 \'c4\'da\'b5\'e5\'b8\'a6 \'c0\'db\'bc\'ba\'c7\'d1 \'c5\'ac\'b7\'a1\'bd\'ba(DAO - Repository) : BuyDAO\
+\'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c3\'e2\'b7\'c2\'c7\'cf\'b0\'ed \'c0\'db\'be\'f7\'bf\'a1 \'b0\'fc\'b7\'c3\'b5\'c8 UI \'c5\'ac\'b7\'a1\'bd\'ba(View - Presentation) : BuyView\
+BuyView \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1\'bc\'ad \'c0\'cc\'ba\'a5\'c6\'ae\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'cf\'b8\'e9 \'c0\'cc\'ba\'a5\'c6\'ae\'b8\'a6 \'c3\'b3\'b8\'ae\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d1 \'c5\'ac\'b7\'a1\'bd\'ba(EventHandler - Listener) : BuyEventHandler\
+Java Application\'c0\'bb \'b8\'b8\'b5\'e9\'b1\'e2 \'c0\'a7\'c7\'d1 Entry Point\'bf\'a1 \'c7\'d8\'b4\'e7\'c7\'cf\'b4\'c2 \'c5\'ac\'b7\'a1\'bd\'ba : Main\
+\
+- \'c1\'f6\'bf\'f2\'b9\'f6\'c6\'b0\'c0\'bb \'b4\'a9\'b8\'a3\'b0\'ed \'c0\'d4\'b7\'c2\'c7\'df\'b4\'c2\'c1\'f6 \'c8\'ae\'c0\'ce\'c7\'d8\'ba\'b8\'b0\'ed \'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'a9\'b8\'a3\'c1\'f6 \'be\'ca\'b0\'ed \'c0\'d4\'b7\'c2\'c7\'df\'b4\'d9\'b8\'e9 \'b9\'ab\'c8\'bf\
+- itemname \'b0\'fa customerid\'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd \'c0\'af\'b9\'ab\'b8\'a6 \'c3\'bc\'c5\'a9\'c7\'d8\'bc\'ad \'c0\'d4\'b7\'c2\'c7\'d1 \'b3\'bb\'bf\'eb\'c0\'cc \'be\'f8\'c0\'b8\'b8\'e9 \'b9\'ab\'c8\'bf\
+\
+- \'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'ad\'b7\'b6\'b4\'c2\'c1\'f6 \'c8\'ae\'c0\'ce\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d1 \'ba\'af\'bc\'f6\'b4\'c2 \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba \'ba\'af\'bc\'f6\'b7\'ce \'c3\'df\'b0\'a1\
+\pard\pardeftab720\partightenfactor0
+\cf2 // \'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'ad\'b7\'b6\'b4\'c2\'c1\'f6 \'c8\'ae\'c0\'ce\'c7\'d2 \'ba\'af\'bc\'f6\cf0 \
+\cf3 boolean\cf0  \cf4 flag\cf0 ;\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+- \'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'ad\'b7\'b6\'c0\'bb \'b6\'a7 flag\'c0\'c7 \'b0\'aa\'c0\'bb \'ba\'af\'b0\'e6\
+\pard\pardeftab720\partightenfactor0
+\cf3 case\cf0  \cf5 "\'c1\'f6\'bf\'f2"\cf0 :\
+	\cf2 // \'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'ad\'b7\'b6\'b4\'d9\'b4\'c2 \'c7\'a5\'bd\'c3\'b8\'a6 \'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d8\'bc\'ad flag\'c0\'c7 \'b0\'aa\'c0\'bb \'ba\'af\'b0\'e6\cf0 \
+	\cf4 flag\cf0  = \cf3 true\cf0 ;\
+\
+- \'c3\'eb\'bc\'d2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'ad\'b7\'b6\'c0\'bb \'b6\'a7 flag\'c0\'c7 \'b0\'aa\'c0\'bb \'bf\'f8\'b7\'a1\'b4\'eb\'b7\'ce \'ba\'b9\'bf\'f8\
+\cf3 case\cf0  \cf5 "\'c3\'eb\'bc\'d2"\cf0 :\
+	\cf4 flag\cf0 =\cf3 false\cf0 ;\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+- \'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'a9\'b8\'a3\'b1\'e2 \'c0\'fc\'bf\'a1 \'bb\'f0\'c0\'d4\'c0\'bb \'b4\'a9\'b8\'a3\'b8\'e9 \'bb\'f0\'c0\'d4 \'b9\'ab\'c8\'bf\
+\pard\pardeftab720\partightenfactor0
+\cf3 case\cf0  \cf5 "\'bb\'f0\'c0\'d4"\cf0 :\
+	\cf3 if\cf0 (\cf4 flag\cf0  == \cf3 false\cf0 ) \{\
+		JOptionPane.showMessageDialog(\cf3 null\cf0 , \cf5 "\'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'a9\'b8\'a3\'b0\'ed \'c0\'d4\'b7\'c2\'c7\'cf\'bc\'bc\'bf\'e4!!!"\cf0 );\
+		\cf3 return\cf0 ;\
+	\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+9) \'bb\'f0\'c0\'d4 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'ad\'b7\'b6\'c0\'bb \'b6\'a7 \'bc\'f6\'c7\'e0\'b5\'c9 \'c4\'da\'b5\'e5\'b8\'a6 BuyEventHandler \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'ad\'b7\'b6\'c0\'bb \'b6\'a7 \'c8\'a3\'c3\'e2\'b5\'c7\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5\'bf\'a1 \'c3\'df\'b0\'a1\
+\
+- \'bb\'f0\'c0\'d4\'c7\'cf\'b4\'c2 \'b1\'e2\'b4\'c9\'c0\'bb \'c3\'df\'b0\'a1\'c7\'d2 \'b6\'a7\'b4\'c2 \'bb\'f0\'c0\'d4\'c0\'bb \'c7\'cf\'b1\'e2 \'c0\'fc\'bf\'a1 \'c0\'af\'c8\'bf\'bc\'ba \'b0\'cb\'bb\'e7\'b8\'a6 \'bc\'f6\'c7\'e0\'c7\'d8\'be\'df \'c7\'d5\'b4\'cf\'b4\'d9.\
+- \'c5\'ac\'b6\'f3\'c0\'cc\'be\'f0\'c6\'ae - \'bc\'ad\'b9\'f6 \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a5\'c0\'bb \'b8\'b8\'b5\'e9\'b8\'e9 \'c5\'ac\'b6\'f3\'c0\'cc\'be\'f0\'c6\'ae\'bf\'a1\'bc\'ad\'b5\'b5 \'c7\'cf\'b0\'ed \'bc\'ad\'b9\'f6\'bf\'a1\'bc\'ad\'b5\'b5 \'c7\'d8\'c1\'d6\'b4\'c2 \'b0\'cd\'c0\'cc \'c1\'c1\'bd\'c0\'b4\'cf\'b4\'d9.\
+- \'c5\'ac\'b6\'f3\'c0\'cc\'be\'f0\'c6\'ae\'bf\'a1\'bc\'ad \'c7\'cf\'b8\'e9 \'c1\'c1\'c0\'ba \'c1\'a1\'c0\'ba \'ba\'fc\'b8\'a3\'b0\'d4 \'b9\'dd\'c0\'c0\'c7\'d1\'b4\'d9\'b4\'c2 \'b0\'cd\'c0\'ce\'b5\'a5 \'be\'c8 \'c1\'c1\'c0\'ba \'c1\'a1\'c0\'ba \'ba\'b8\'c0\'ce\'c0\'cc \'c3\'eb\'be\'e0\'c7\'d8\'bc\'ad \'c5\'ac\'b6\'f3\'c0\'cc\'be\'f0\'c6\'ae\'c0\'c7\
+\'c0\'af\'c8\'bf\'bc\'ba \'b0\'cb\'bb\'e7\'b8\'a6 \'b9\'ab\'c8\'bf\'c8\'ad \'bd\'c3\'c5\'b3 \'bc\'f6 \'c0\'d6\'bd\'c0\'b4\'cf\'b4\'d9.\
+- Database\'bf\'a1\'bc\'ad\'b4\'c2 \'b9\'ab\'b0\'e1\'bc\'ba \'c1\'a6\'be\'e0\'c1\'b6\'b0\'c7(not null, unique, primary key, check, foreign key)\'c0\'cc \'c0\'af\'c8\'bf\'bc\'ba \'b0\'cb\'bb\'e7\'c0\'d4\'b4\'cf\'b4\'d9.\
+\
+- \'bb\'f0\'c0\'d4\'c0\'cc\'b3\'aa \'bc\'f6\'c1\'a4\'c0\'c7 \'c3\'b3\'b8\'ae\'b0\'fa\'c1\'a4\
+\
+\'bb\'f0\'c0\'d4\'c0\'cc\'b3\'aa \'bc\'f6\'c1\'a4\'c7\'d2 \'b5\'a5\'c0\'cc\'c5\'cd \'c0\'d0\'be\'ee\'bf\'c0\'b1\'e2 -> \'c0\'af\'c8\'bf\'bc\'ba \'b0\'cb\'bb\'e7 -> \'b5\'a5\'c0\'cc\'c5\'cd \'bb\'f0\'c0\'d4\'c0\'cc\'b3\'aa \'bc\'f6\'c1\'a4\'c7\'d2 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'bb\'fd\'bc\'ba\
+-> \'bb\'f0\'c0\'d4\'c0\'cc\'b3\'aa \'bc\'f6\'c1\'a4 -> \'c1\'be\'b7\'e1 \'c8\'c4 \'bc\'f6\'c7\'e0\'c7\'d2 \'b3\'bb\'bf\'eb(\'b8\'de\'bd\'c3\'c1\'f6\'b8\'a6 \'c3\'e2\'b7\'c2\'c7\'cf\'b0\'ed \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c0\'e7\'c3\'e2\'b7\'c2\'c7\'cf\'b0\'c5\'b3\'aa \'b4\'d9\'b8\'a5 \'c8\'ad\'b8\'e9\'c0\'b8\'b7\'ce \'c0\'cc\'b5\'bf)\
+\
+\pard\pardeftab720\partightenfactor0
+\cf3 case\cf0  \cf5 "\'bb\'f0\'c0\'d4"\cf0 :\
+	\cf3 if\cf0 (\cf4 flag\cf0  == \cf3 false\cf0 ) \{\
+		JOptionPane.showMessageDialog(\cf3 null\cf0 , \cf5 "\'c1\'f6\'bf\'f2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'a9\'b8\'a3\'b0\'ed \'c0\'d4\'b7\'c2\'c7\'cf\'bc\'bc\'bf\'e4!!!"\cf0 );\
+		\cf3 return\cf0 ;\
+	\}\
+	\cf2 // \cf2 \ul \ulc2 itemname\cf2 \ulnone \'c0\'c7 \'c0\'d4\'b7\'c2 \'c3\'bc\'c5\'a9\cf0 \
+	\cf2 // \cf2 \ul \ulc2 itemname\cf2 \ulnone \'bf\'a1\'bc\'ad \'c1\'df\'b0\'a3 \'b0\'f8\'b9\'e9 \'bb\'e8\'c1\'a6?\cf0 \
+	\cf6 itemname\cf0  = \cf4 buyView\cf0 .\cf4 txtItemName\cf0 .getText().trim();\
+	\cf3 if\cf0 (\cf6 itemname\cf0 .length() <1) \{\
+		JOptionPane.showMessageDialog(\cf3 null\cf0 , \cf5 "\'be\'c6\'c0\'cc\'c5\'db \'c0\'cc\'b8\'a7\'c0\'ba \'c7\'ca\'bc\'f6"\cf0 );\
+		\cf3 return\cf0 ;\
+	\}\
+	\cf6 customerid\cf0  = \cf4 buyView\cf0 .\cf4 txtCustomerId\cf0 .getText().trim();\
+	\cf3 if\cf0 (\cf6 customerid\cf0 .length() < 1) \{\
+		\cf3 return\cf0 ;\
+	\}\
+	String \cf6 buyCount\cf0  = \cf4 buyView\cf0 .\cf4 txtCount\cf0 .getText().trim();\
+	\cf2 // \'bb\'f0\'c0\'d4\'c7\'d2 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'bb\'fd\'bc\'ba\cf0 \
+	Buy \cf6 buy1\cf0  = \cf3 new\cf0  Buy();\
+	\cf2 // \'b0\'aa\'c0\'bb \'c3\'a4\'bf\'f6\'b3\'d6\'b1\'e2\cf0 \
+	\cf6 buy1\cf0 .setItemname(\cf6 itemname\cf0 );\
+	\cf6 buy1\cf0 .setCustomerid(\cf6 customerid\cf0 );\
+	\cf6 buy1\cf0 .setCount(Integer.parseInt(\cf6 buyCount\cf0 ));	\
+	\cf2 // \'bb\'f0\'c0\'d4\'c7\'cf\'b4\'c2 \'b8\'de\'bc\'d2\'b5\'e5 \'c8\'a3\'c3\'e2\cf0 \
+	BuyDao \cf6 dao\cf0  = \cf3 new\cf0  BuyDao();\
+	\cf3 int\cf0  \cf6 r1\cf0  = \cf6 dao\cf0 .insertBuy(\cf6 buy1\cf0 );\
+	\cf2 // \'bb\'f0\'c0\'d4 \'bc\'ba\'b0\'f8\'c7\'d1 \'b0\'e6\'bf\'ec\cf0 \
+	\cf3 if\cf0 (\cf6 r1\cf0  > 0) \{\
+		\cf2 // \'c0\'fc\'c3\'bc \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'a1\'c1\'ae\'bf\'c0\'b1\'e2\cf0 \
+		\cf4 buyView\cf0 .\cf4 list\cf0  = \cf6 dao\cf0 .getList();\
+		\cf2 // \'b8\'b6\'c1\'f6\'b8\'b7 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c3\'e2\'b7\'c2\cf0 \
+		\cf4 buyView\cf0 .\cf4 idx\cf0  = \cf4 buyView\cf0 .\cf4 list\cf0 .size()-1;\
+		\cf4 buyView\cf0 .display();\
+		\cf2 // \'bc\'ba\'b0\'f8 \'b8\'de\'bd\'c3\'c1\'f6\'b8\'a6 \'c3\'e2\'b7\'c2\cf0 \
+		JOptionPane.showMessageDialog(\cf3 null\cf0 , \cf5 "\'bb\'f0\'c0\'d4\'bc\'ba\'b0\'f8"\cf0 );\
+		\cf2 // \'b9\'f6\'c6\'b0\'b5\'e9\'c0\'bb \'c8\'b0\'bc\'ba\'c8\'ad\cf0 \
+		\cf4 buyView\cf0 .\cf4 btnClear\cf0 .setText(\cf5 "\'c1\'f6\'bf\'f2"\cf0 );\
+		\cf4 buyView\cf0 .\cf4 btnDelete\cf0 .setEnabled(\cf3 true\cf0 );\
+		\cf4 buyView\cf0 .\cf4 btnUpdate\cf0 .setEnabled(\cf3 true\cf0 );\
+		\cf4 buyView\cf0 .\cf4 btnSearch\cf0 .setEnabled(\cf3 true\cf0 );\
+	\}\cf3 else\cf0  \{\
+		\cf2 // \'bd\'c7\'c6\'d0 \'b8\'de\'bd\'c3\'c1\'f6\'b8\'a6 \'c3\'e2\'b7\'c2\cf0 \
+		JOptionPane.showMessageDialog(\cf3 null\cf0 , \cf5 "\'bb\'f0\'c0\'d4\'bd\'c7\'c6\'d0"\cf0 );\
+	\}\
+	\cf3 break\cf0 ;\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+- \'bc\'f8\'c2\'f7\'c0\'fb\'c0\'b8\'b7\'ce \'bd\'c7\'c7\'e0\'b5\'c9 \'c7\'ca\'bf\'e4\'b0\'a1 \'be\'f8\'b4\'c2 \'c4\'da\'b5\'e5\'b4\'c2 \'bd\'ba\'b7\'b9\'b5\'e5\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'d8\'bc\'ad \'ba\'f1\'b5\'bf\'b1\'e2\'c0\'fb\'c0\'b8\'b7\'ce \'bd\'c7\'c7\'e0\'b5\'c7\'b5\'b5\'b7\'cf \'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'cc \'c1\'c1\'bd\'c0\'b4\'cf\'b4\'d9.\
+- \'bf\'c0\'b7\'a3\'bd\'c3\'b0\'a3\'c0\'cc \'b0\'c9\'b8\'ae\'b4\'c2 \'c0\'db\'be\'f7\'c0\'cc\'b3\'aa \'b8\'f0\'b4\'de \'b4\'eb\'c8\'ad\'bb\'f3\'c0\'da(\'b4\'eb\'c8\'ad\'bb\'f3\'c0\'da\'b0\'a1 \'c8\'ad\'b8\'e9\'bf\'a1 \'c3\'e2\'b7\'c2\'b5\'c7\'be\'ee \'c0\'d6\'b4\'c2 \'b5\'bf\'be\'c8 \'b4\'d9\'b8\'a5 \'c0\'db\'be\'f7\'c0\'bb\
+\'bc\'f6\'c7\'e0\'c7\'d2 \'bc\'f6 \'be\'f8\'b5\'b5\'b7\'cf \'c7\'cf\'b4\'c2 \'b4\'eb\'c8\'ad\'bb\'f3\'c0\'da)\'b8\'a6 \'c3\'e2\'b7\'c2\'c7\'cf\'b4\'c2 \'c0\'db\'be\'f7\'c0\'ba \'bd\'ba\'b7\'b9\'b5\'e5\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'d8\'bc\'ad \'ba\'f1\'b5\'bf\'b1\'e2\'c0\'fb\'c0\'b8\'b7\'ce \'b5\'bf\'c0\'db\'c7\'cf\'b5\'b5\'b7\'cf \'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'cc \'c1\'c1\'bd\'c0\'b4\'cf\'b4\'d9.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 // \'bb\'f0\'c0\'d4 \'bc\'ba\'b0\'f8\'c7\'d1 \'b0\'e6\'bf\'ec\cf0 \
+\cf3 if\cf0 (\cf6 r1\cf0  > 0) \{\
+Thread \cf6 th\cf0  = \cf3 new\cf0  Thread() \{\
+	\cf3 public\cf0  \cf3 void\cf0  run() \{\
+		\cf2 // \'c0\'fc\'c3\'bc \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'b0\'a1\'c1\'ae\'bf\'c0\'b1\'e2\cf0 \
+		\cf4 buyView\cf0 .\cf4 list\cf0  = \cf6 dao\cf0 .getList();\
+		\cf2 // \'b8\'b6\'c1\'f6\'b8\'b7 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c3\'e2\'b7\'c2\cf0 \
+		\cf4 buyView\cf0 .\cf4 idx\cf0  = \cf4 buyView\cf0 .\cf4 list\cf0 .size()-1;\
+		\cf4 buyView\cf0 .display();\
+	\}\
+\};\
+\pard\pardeftab720\partightenfactor0
+\cf6 th\cf0 .start();\
+\pard\pardeftab720\partightenfactor0
+\cf2 // \'bc\'ba\'b0\'f8 \'b8\'de\'bd\'c3\'c1\'f6\'b8\'a6 \'c3\'e2\'b7\'c2\cf0 \
+JOptionPane.showMessageDialog(\cf3 null\cf0 , \cf5 "\'bb\'f0\'c0\'d4\'bc\'ba\'b0\'f8"\cf0 );\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 10) \'c1\'b6\'c8\'b8 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'ad\'b7\'b6\'c0\'bb \'b6\'a7 \'bc\'f6\'c7\'e0\'c7\'d2 \'c4\'da\'b5\'e5\'b8\'a6 \'c3\'df\'b0\'a1\
+\
+- \'c1\'b6\'c8\'b8\'b4\'c2 \'c7\'cf\'b3\'aa\'c0\'c7 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'bb \'c0\'d4\'b7\'c2\'b9\'de\'c0\'bb \'bc\'f6 \'c0\'d6\'b4\'c2 \'b4\'eb\'c8\'ad\'bb\'f3\'c0\'da\'b8\'a6 \'c3\'e2\'b7\'c2\'c7\'cf\'b0\'ed \'b4\'eb\'c8\'ad\'bb\'f3\'c0\'da\'bf\'a1 \'c0\'d4\'b7\'c2\'c7\'d1 \'b9\'ae\'c0\'da\'bf\'ad\'bf\'a1 \'c7\'d8\'b4\'e7\'c7\'cf\'b4\'c2 \'c4\'da\'b5\'e5\'b8\'a6\
+\'b0\'a1\'c1\'f8 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c3\'a3\'be\'c6\'bf\'c0\'b1\'e2\
+\pard\pardeftab720\partightenfactor0
+\cf3 case\cf0  \cf5 "\'c1\'b6\'c8\'b8"\cf0 :\
+	String \cf6 code\cf0  = JOptionPane.showInputDialog(\cf5 "\'c4\'da\'b5\'e5\'b8\'a6 \'c0\'d4\'b7\'c2\'c7\'cf\'bc\'bc\'bf\'e4!!!"\cf0 );\
+	\cf2 // \'c3\'eb\'bc\'d2 \'b9\'f6\'c6\'b0\'c0\'bb \'b4\'a9\'b8\'a5 \'b0\'cd\'c0\'cc \'be\'c6\'b4\'cf\'b6\'f3\'b8\'e9\cf0 \
+	\cf3 if\cf0 (\cf6 code\cf0  != \cf3 null\cf0 ) \{\
+		\cf2 // \'c0\'d4\'b7\'c2\'b9\'de\'c0\'ba \'c4\'da\'b5\'e5\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c3\'a3\'be\'c6\'bf\'c0\'b1\'e2\cf0 \
+		\cf6 dao\cf0  = \cf3 new\cf0  BuyDao();\
+		\cf6 buy\cf0  = \cf6 dao\cf0 .getBuy(Integer.parseInt(\cf6 code\cf0 ));\
+		\cf3 if\cf0 (\cf6 buy\cf0  == \cf3 null\cf0 ) \{\
+			JOptionPane.showMessageDialog(\cf3 null\cf0 , \cf5 "\'be\'f8\'b4\'c2 \'c4\'da\'b5\'e5\'c0\'d4\'b4\'cf\'b4\'d9."\cf0 );\
+			\cf3 return\cf0 ;\
+		\}\
+		\cf4 buyView\cf0 .\cf4 list\cf0 .clear();\
+		\cf4 buyView\cf0 .\cf4 list\cf0 .add(\cf6 buy\cf0 );\
+		\cf4 buyView\cf0 .\cf4 idx\cf0  = 0;\
+		\cf4 buyView\cf0 .display();\
+	\}	\
+	\cf3 break\cf0 ;\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+** \'b7\'ce\'b1\'d7 \'b1\'e2\'b7\'cf\
+\
+- Log \'b1\'e2\'b7\'cf : \'c0\'db\'be\'f7 \'b3\'bb\'bf\'aa\'c0\'cc\'b3\'aa \'bf\'c0\'b7\'f9 \'b3\'bb\'bf\'aa \'b5\'ee\'c0\'bb \'c8\'ad\'b8\'e9\'c0\'cc\'b3\'aa \'c6\'c4\'c0\'cf \'b6\'c7\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1 \'b1\'e2\'b7\'cf\'c7\'cf\'b4\'c2 \'b0\'cd\
+- \'b7\'ce\'b1\'d7\'b8\'a6 \'b1\'e2\'b7\'cf\'c7\'d8\'b5\'ce\'b8\'e9 \'bd\'c3\'bd\'ba\'c5\'db\'bf\'a1 \'c0\'e5\'be\'d6\'b0\'a1 \'b9\'df\'bb\'fd\'c7\'df\'c0\'bb \'b6\'a7 \'ba\'b9\'b1\'b8\'b0\'a1 \'bd\'ac\'bf\'f6\'c1\'f6\'b0\'ed \'b4\'d9\'c0\'bd\'bf\'a1 \'b4\'d9\'b8\'a5 \'b0\'b3\'b9\'df\'c0\'bb \'c7\'d2 \'b6\'a7 \'c2\'fc\'b0\'ed\'b0\'a1 \'b5\'c7\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1\
+\'c7\'d0\'bd\'c0\'bf\'eb\'c0\'b8\'b7\'ce\'b5\'b5 \'bb\'e7\'bf\'eb\
+- \'ba\'f3\'b9\'f8\'c8\'f7 \'b9\'df\'bb\'fd\'c7\'cf\'b4\'c2 \'c0\'db\'be\'f7\'c0\'c7 \'b7\'ce\'b1\'d7\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1 \'b1\'e2\'b7\'cf\'c7\'cf\'b1\'e2\'bf\'a1\'b4\'c2 \'ba\'ce\'b4\'e3\'c0\'cc \'b5\'cb\'b4\'cf\'b4\'d9.\
+- \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1 \'c0\'fa\'c0\'e5\'c7\'d8\'b5\'ce\'b8\'e9 \'b0\'cb\'bb\'f6\'c0\'cc \'bf\'eb\'c0\'cc\'c7\'cf\'b4\'d9\'b4\'c2 \'c0\'e5\'c1\'a1\'c0\'ba \'c0\'d6\'b4\'c2\'b5\'a5 \'b1\'e2\'ba\'bb\'c0\'fb\'c0\'ce \'bf\'c0\'b9\'f6\'c7\'ec\'b5\'e5(\'bc\'f8\'bc\'f6\'c7\'d1 \'b7\'ce\'b1\'d7 \'c0\'cc\'bf\'dc\'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd)\'b0\'a1 \'b9\'df\'bb\'fd\
+\
+- \'bb\'f0\'c0\'d4, \'bb\'e8\'c1\'a6, \'bc\'f6\'c1\'a4 \'c0\'db\'be\'f7\'c0\'cc \'bc\'f6\'c7\'e0\'b5\'c9 \'b6\'a7 \'c0\'db\'be\'f7 \'b3\'bb\'bf\'eb\'b0\'fa \'bd\'c3\'b0\'a3\'c0\'bb \'c0\'fa\'c0\'e5\
+\'b8\'c5\'c0\'cf \'c6\'c4\'c0\'cf\'c0\'bb \'bb\'f5\'b7\'ce \'bb\'fd\'bc\'ba\'c7\'d8\'bc\'ad \'b1\'e2\'b7\'cf\
+\
+1. EventHandler \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1 \'c6\'c4\'c0\'cf\'bf\'a1 \'b1\'e2\'b7\'cf\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'c2 PrintWriter \'c5\'ac\'b7\'a1\'bd\'ba \'c5\'b8\'c0\'d4\'c0\'c7 \'ba\'af\'bc\'f6\'b8\'a6 \'bc\'b1\'be\'f0\
+\
+- \'b9\'d9\'c0\'cc\'c6\'ae \'b4\'dc\'c0\'a7\'b7\'ce \'b1\'e2\'b7\'cf\'c7\'cf\'b0\'ed \'c0\'d0\'be\'ee\'bf\'c0\'b4\'c2 \'b0\'e6\'bf\'ec : BufferedInpuStream, PrintStream\
+- \'b9\'ae\'c0\'da \'b4\'dc\'c0\'a7\'b7\'ce \'b1\'e2\'b7\'cf\'c7\'cf\'b0\'ed \'c0\'d0\'be\'ee\'bf\'c0\'b4\'c2 \'b0\'e6\'bf\'ec : BufferedReader, PrintWriter\
+\
+- \'b7\'ce\'b1\'d7\'b8\'a6 \'b1\'e2\'b7\'cf\'c7\'d2 \'b9\'ae\'c0\'da \'bd\'ba\'c6\'ae\'b8\'b2\
+\pard\pardeftab720\partightenfactor0
+\cf2 // \'b7\'ce\'b1\'d7\'b8\'a6 \'b1\'e2\'b7\'cf\'c7\'d2 \'b9\'ae\'c0\'da \'bd\'ba\'c6\'ae\'b8\'b2\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul \ulc0 PrintWriter\ulnone  \cf4 pw\cf0 ;\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+2. \'bb\'fd\'bc\'ba\'c0\'da\'bf\'a1\'bc\'ad \'bf\'c0\'b4\'c3 \'b3\'af\'c2\'a5\'bf\'a1 \'c7\'d8\'b4\'e7\'c7\'cf\'b4\'c2 \'c6\'c4\'c0\'cf\'bf\'a1 \'b1\'e2\'b7\'cf\'c7\'d2 \'bc\'f6 \'c0\'d6\'b5\'b5\'b7\'cf pw\'b8\'a6 \'bc\'b3\'c1\'a4\
+\
+\pard\pardeftab720\partightenfactor0
+\cf3 public\cf0  BuyEventHandler(BuyView \cf6 buyView\cf0 ) \{\
+	\cf3 super\cf0 ();\
+	\cf2 // \'ba\'af\'bc\'f6\'b4\'c2 \'be\'c6\'b9\'ab\'b7\'b1 \'b1\'e2\'c8\'a3\'b0\'a1 \'ba\'d9\'c1\'f6 \'be\'ca\'c0\'b8\'b8\'e9 \'b0\'a1\'b1\'ee\'bf\'ee \'b0\'f7\'bf\'a1\'bc\'ad \'b8\'b8\'b5\'e9\'be\'ee\'c1\'f8 \'b0\'cd\'c0\'bb \'bb\'e7\'bf\'eb\cf0 \
+	\cf2 // this.\'c0\'bb \'ba\'d9\'c0\'cc\'b8\'e9 \'b8\'de\'bc\'d2\'b5\'e5 \'bf\'dc\'ba\'ce\'bf\'a1\'bc\'ad \'c3\'a3\'be\'c6\'bc\'ad \'bb\'e7\'bf\'eb\cf0 \
+	\cf2 // super.\'c0\'bb \'ba\'d9\'c0\'cc\'b8\'e9 \'bb\'f3\'c0\'a7 \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1\'bc\'ad \'c3\'a3\'be\'c6\'bc\'ad \'bb\'e7\'bf\'eb\cf0 \
+	\cf3 this\cf0 .\cf4 buyView\cf0  = \cf6 buyView\cf0 ;\
+	\
+	\cf2 // \'bf\'c0\'b4\'c3 \'b3\'af\'c2\'a5\'b8\'a6 \'b9\'ae\'c0\'da\'bf\'ad\'b7\'ce \'b8\'b8\'b5\'e9\'b1\'e2\cf0 \
+	Calendar \cf6 cal\cf0  = \cf3 new\cf0  GregorianCalendar();\
+	java.sql.Date \cf6 today\cf0  = \cf3 new\cf0  java.sql.Date(\cf6 cal\cf0 .getTimeInMillis());\
+	String \cf6 \ul \ulc6 filename\cf0 \ulnone  =  \cf6 today\cf0 .toString();\
+\pard\pardeftab720\partightenfactor0
+\cf2 	// \'c6\'c4\'c0\'cf\'c0\'cc \'c1\'b8\'c0\'e7\'c7\'cf\'b8\'e9 \'b3\'bb\'bf\'eb\'c0\'bb \'c3\'df\'b0\'a1\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d8\'bc\'ad FileOutputStream\'c0\'bb \'b8\'b8\'b5\'e9\'b0\'ed\cf0 \
+	\cf2 // PrintWriter\'b8\'a6 \'bb\'fd\'bc\'ba\cf0 \
+	\cf3 try\cf0  \{\
+		\cf4 pw\cf0  = \cf3 new\cf0  PrintWriter(\cf3 new\cf0  FileOutputStream(\cf5 "./"\cf0  + \cf6 filename\cf0 , \cf3 true\cf0 ));\
+	\} \cf3 catch\cf0  (FileNotFoundException \cf6 e\cf0 ) \{\
+		\cf6 e\cf0 .printStackTrace();\
+	\}\
+\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+3. \'bb\'f0\'c0\'d4, \'bb\'e8\'c1\'a6, \'b0\'bb\'bd\'c5 \'c0\'db\'be\'f7 \'c8\'c4\'bf\'a1 \'b1\'e2\'b7\'cf\
+\
+- \'bb\'e8\'c1\'a6 \'c0\'db\'be\'f7\'c0\'bb \'bc\'f6\'c7\'e0\'c7\'cf\'b4\'c2 \'c4\'da\'b5\'e5 \'b5\'da\'bf\'a1 \'c3\'df\'b0\'a1\
+\pard\pardeftab720\partightenfactor0
+\cf3 case\cf0  \cf5 "\'bb\'e8\'c1\'a6"\cf0 :\
+	\cf3 int\cf0  \cf6 result\cf0  = JOptionPane.showConfirmDialog(\cf3 null\cf0 , \cf5 "\'c1\'a4\'b8\'bb\'b7\'ce \'bb\'e8\'c1\'a6?"\cf0 , \cf5 "\'bb\'e8\'c1\'a6"\cf0 , JOptionPane.\cf4 YES_NO_OPTION\cf0 );\
+	\cf3 if\cf0 (\cf6 result\cf0  == JOptionPane.\cf4 YES_OPTION\cf0 ) \{\
+		\cf2 // \'c7\'f6\'c0\'e7 \'b5\'a5\'c0\'cc\'c5\'cd \'b0\'a1\'c1\'ae\'bf\'c0\'b1\'e2\cf0 \
+		Buy \cf6 buy\cf0  = \cf4 buyView\cf0 .\cf4 list\cf0 .get(\cf4 buyView\cf0 .\cf4 idx\cf0 );\
+		\cf2 // \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1\'bc\'ad \'bb\'e8\'c1\'a6\cf0 \
+		BuyDao \cf6 dao\cf0  = \cf3 new\cf0  BuyDao();\
+		\cf6 dao\cf0 .deleteBuy(\cf6 buy\cf0 .getBuycode());\
+		\cf2 // \'b8\'de\'b8\'f0\'b8\'ae\'bf\'a1\'bc\'ad \'bb\'e8\'c1\'a6\cf0 \
+		\cf4 buyView\cf0 .\cf4 list\cf0 .remove(\cf4 buyView\cf0 .\cf4 idx\cf0 );\
+		\cf2 // \cf2 \ul \ulc2 idx\cf2 \ulnone \'b8\'a6 \'c1\'b6\'c1\'a4\'c7\'cf\'b0\'ed \'b4\'d9\'bd\'c3 \'c3\'e2\'b7\'c2\cf0 \
+		\cf4 buyView\cf0 .\cf4 idx\cf0  = 0;\
+		\cf4 buyView\cf0 .display();\
+	\}\cf3 else\cf0  \{\
+		JOptionPane.showMessageDialog(\cf3 null\cf0 , \cf5 "\'bb\'e8\'c1\'a6\'b0\'a1 \'c3\'eb\'bc\'d2\'b5\'c7\'be\'fa\'bd\'c0\'b4\'cf\'b4\'d9"\cf0 );\
+	\}\
+\pard\pardeftab720\partightenfactor0
+\cf2 	// \'c7\'f6\'c0\'e7 \'bd\'c3\'b0\'a3\'c0\'bb \'bb\'fd\'bc\'ba\cf0 \
+	Calendar \cf6 cal\cf0  = \cf3 new\cf0  GregorianCalendar();\
+\cf2 	// Calendar \'b0\'b4\'c3\'bc\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'d8\'bc\'ad java.util.Date\'b0\'b4\'c3\'bc\'b8\'a6 \'bb\'fd\'bc\'ba\cf0 \
+	\cf2 // \'b3\'af\'c2\'a5\'bf\'cd \'bd\'c3\'b0\'a3 \'b8\'f0\'b5\'ce \'bb\'e7\'bf\'eb\'c7\'d2 \'b6\'a7\'b4\'c2 java.util.Date\cf0 \
+	\cf2 // \'b3\'af\'c2\'a5\'b8\'b8 \'bb\'e7\'bf\'eb\'c7\'d2 \'b6\'a7\'b4\'c2 java.sql.Date\cf0 \
+	java.util.Date \cf6 today\cf0  = \cf3 new\cf0  java.util.Date(\cf6 cal\cf0 .getTimeInMillis());\
+	\cf2 // Date \'b0\'b4\'c3\'bc\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'b3\'af\'c2\'a5\'b3\'aa \'bd\'c3\'b0\'a3 \'b9\'ae\'c0\'da\'bf\'ad\'c0\'bb \'b8\'b8\'b5\'e9\'b1\'e2 \'c0\'a7\'c7\'d1 \'c5\'ac\'b7\'a1\'bd\'ba\'c0\'c7 \'b0\'b4\'c3\'bc \'bb\'fd\'bc\'ba\cf0 \
+	SimpleDateFormat \cf6 sdf\cf0  = \cf3 new\cf0  SimpleDateFormat(\cf5 "hh:mm:ss"\cf0 );\
+	String \cf6 log\cf0  = (\cf5 "\'bb\'e8\'c1\'a6"\cf0  + \cf6 sdf\cf0 .format(\cf6 today\cf0 ) + \cf5 "\\n"\cf0 );\
+	\cf4 pw\cf0 .println(\cf6 log\cf0 );\
+	\cf4 pw\cf0 .flush();			\
+	\cf3 break\cf0 ;\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+** \'b8\'ae\'b9\'f6\'bd\'ba \'bf\'a3\'c1\'f6\'b4\'cf\'be\'ee\'b8\'b5 & \'c6\'f7\'bf\'f6\'b5\'e5 \'bf\'a3\'c1\'f6\'b4\'cf\'be\'ee\'b8\'b5\
+\
+1) \'c6\'f7\'bf\'f6\'b5\'e5 \'bf\'a3\'c1\'f6\'b4\'cf\'be\'ee\'b8\'b5\'c0\'ba \'b0\'b3\'b9\'df \'bc\'f8\'bc\'ad \'b4\'eb\'b7\'ce \'b0\'b3\'b9\'df\'c0\'bb \'c1\'f8\'c7\'e0\
+\
+- \'ba\'d0\'bc\'ae -> \'bc\'b3\'b0\'e8 -> \'b1\'b8\'c7\'f6\
+- \'ba\'d0\'bc\'ae \'b9\'d7 \'bc\'b3\'b0\'e8\'b8\'a6 \'bc\'f6\'c7\'e0\'c7\'d1 \'c1\'a4\'ba\'b8\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'b1\'b8\'c7\'f6\
+\
+2) \'b8\'ae\'b9\'f6\'bd\'ba \'bf\'a3\'c1\'f6\'b4\'cf\'be\'ee\'b8\'b5\'c0\'ba \'b1\'b8\'c7\'f6\'b5\'c8 \'c1\'a4\'ba\'b8\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'bc\'b3\'b0\'e8 \'c1\'a4\'ba\'b8\'b8\'a6 \'c3\'df\'c3\'e2\'c7\'cf\'b4\'c2 \'b0\'cd\
+\
+- \'c0\'af\'c1\'f6\'ba\'b8\'bc\'f6\'b8\'a6 \'c0\'a7\'c7\'d8\'bc\'ad \'c0\'cc\'b9\'cc \'b1\'b8\'c7\'f6\'b5\'c8 \'bd\'c3\'bd\'ba\'c5\'db\'bf\'a1\'bc\'ad \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'c1\'a4\'ba\'b8\'b3\'aa \'c5\'ac\'b7\'a1\'bd\'ba\'bf\'a1 \'b4\'eb\'c7\'d1 \'c1\'a4\'ba\'b8\'b8\'a6 \'c3\'df\'c3\'e2\'c7\'d5\'b4\'cf\'b4\'d9.\
+\
+** \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'c0\'db\'be\'f7\'c0\'bb \'c7\'d2 \'b6\'a7 \'bc\'b3\'b0\'e8\'c7\'d1 \'b3\'bb\'bf\'eb\'c0\'bb \'b0\'a1\'c1\'f6\'b0\'ed \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'bb \'b8\'b8\'b5\'e9\'be\'ee \'c1\'d6\'b0\'ed \'b8\'b8\'b5\'e9\'be\'ee\'c1\'f8 \'c5\'d7\'c0\'cc\'ba\'ed\'b7\'ce\'ba\'ce\'c5\'cd\
+\'bc\'b3\'b0\'e8 \'c1\'a4\'ba\'b8\'b8\'a6 \'c3\'df\'c3\'e2\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'c2 \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a5\'c0\'bb E-R Modeling Toll\'c0\'cc\'b6\'f3\'b0\'ed \'c7\'d5\'b4\'cf\'b4\'d9.\
+\'c7\'f6\'be\'f7\'bf\'a1\'bc\'ad \'b0\'a1\'c0\'e5 \'c0\'af\'b8\'ed\'c7\'d1 \'b8\'f0\'b5\'a8\'b8\'b5 \'b5\'b5\'b1\'b8\'b4\'c2 E-R Win \'c0\'d4\'b4\'cf\'b4\'d9.\
+\
+** eXERD \'bc\'b3\'c4\'a1\
+\
+- \'bb\'e7\'c0\'cc\'c6\'ae\'bf\'a1\'bc\'ad \'c1\'f7\'c1\'a2 \'b4\'d9\'bf\'ee\'b7\'ce\'b5\'e5 \'b9\'de\'be\'c6\'bc\'ad \'bc\'b3\'c4\'a1 \'b0\'a1\'b4\'c9 - http://ko.exerd.com/#download-section\
+- eclipse \'c7\'c3\'b7\'af\'b1\'d7\'c0\'ce\'c0\'b8\'b7\'ce \'bc\'b3\'c4\'a1 \'b0\'a1\'b4\'c9 - http://exerd.com/update\
+\
+1. [Help] - [install new software]\'b8\'a6 \'c5\'ac\'b8\'af\
+\
+- \'c1\'d6\'bc\'d2\'b8\'a6 \'b8\'f0\'b8\'a6 \'b6\'a7\'b4\'c2 [Eclipse Marketplace]\'b8\'a6 \'c5\'ac\'b8\'af\'c7\'d8\'bc\'ad \'b0\'cb\'bb\'f6\'c7\'d8\'bc\'ad \'bc\'b3\'c4\'a1\
+\
+2. Work with \'bf\'b7\'bf\'a1 URL\'c0\'bb \'c0\'d4\'b7\'c2\'c7\'cf\'b0\'ed Enter \
+\
+- URL(http://exerd.com/update)\
+\
+3. eXERD\'b0\'a1 \'b0\'cb\'bb\'f6\'b5\'c7\'b8\'e9 \'c3\'bc\'c5\'a9\'b8\'a6 \'c7\'cf\'b0\'ed Next \'b9\'f6\'c6\'b0\'b0\'fa \'bb\'e7\'bf\'eb\'b1\'c7 \'b5\'bf\'c0\'c7\'b8\'b8 \'c3\'bc\'c5\'a9\'c7\'cf\'b8\'e9 \'bc\'b3\'c4\'a1\'b0\'a1 \'b5\'cb\'b4\'cf\'b4\'d9.\
+\
+- Eclipse \'c7\'c3\'b7\'af\'b1\'d7 \'c0\'ce\'c0\'ba \'bc\'b3\'c4\'a1\'c7\'cf\'b0\'ed \'b3\'aa\'b8\'e9 eclipse\'b8\'a6 \'c0\'e7\'bd\'c3\'c0\'db\'c7\'d8\'be\'df \'c7\'d5\'b4\'cf\'b4\'d9.\
+\
+4. \'c7\'c3\'b7\'af\'b1\'d7 \'c0\'ce\'c0\'cc \'c1\'a6\'b4\'eb\'b7\'ce \'bc\'b3\'c4\'a1\'b5\'c7\'be\'fa\'b4\'c2\'c1\'f6 \'c8\'ae\'c0\'ce\
+\
+[Window] - [Perspective] - [Open Perspective] - [Other]\'bf\'a1 \'b0\'a1\'ba\'b8\'b8\'e9 Perspective\'b0\'a1 \'bb\'fd\'b1\'e2\'b8\'e9 \'c1\'a6\'b4\'eb\'b7\'ce \'bc\'b3\'c4\'a1\'b5\'c8 \'b0\'cd\'c0\'d4\'b4\'cf\'b4\'d9.\
+\
+** \'b8\'ae\'b9\'f6\'bd\'ba \'bf\'a3\'c1\'f6\'b4\'cf\'be\'ee\'b8\'b5\
+\
+- \'c0\'cc\'b9\'cc \'b1\'b8\'c7\'f6\'b5\'c8 \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'bb \'b0\'a1\'c1\'f6\'b0\'ed E-R \'b4\'d9\'c0\'cc\'be\'ee\'b1\'d7\'b7\'a5\'c0\'bb \'bb\'fd\'bc\'ba\
+\
+1. Ecilpse\'bf\'a1\'bc\'ad Perspective\'b8\'a6 eXERD \'c3\'df\'b0\'a1\
+\
+2. eXERD \'b8\'de\'b4\'ba\'bf\'a1\'bc\'ad \'b8\'ae\'b9\'f6\'bd\'ba \'bf\'a3\'c1\'f6\'b4\'cf\'be\'ee\'b8\'b5\'c0\'bb \'c5\'ac\'b8\'af\
+\
+** \'c6\'f7\'bf\'f6\'b5\'e5 \'bf\'a3\'c1\'f6\'b4\'cf\'be\'ee\'b8\'b5\
+\
+- \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'bc\'b3\'b0\'e8 \'c1\'a4\'ba\'b8\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'b5\'a5\'c0\'cc\'c5\'cd \'ba\'a3\'c0\'cc\'bd\'ba \'b0\'b4\'c3\'bc\'b8\'a6 \'bb\'fd\'bc\'ba\
+- E-R Diagram\'c0\'bb \'b8\'b8\'b5\'e9\'be\'ee\'bc\'ad \'c0\'cc \'c1\'a4\'ba\'b8\'b8\'a6 \'b0\'a1\'c1\'f6\'b0\'ed \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'bb \'bb\'fd\'bc\'ba\
+\
+1. [File] - [New] - [eXERD] - [eXERD File]\'c0\'bb \'c5\'ac\'b8\'af\'c7\'d8\'bc\'ad \'c6\'c4\'c0\'cf\'c0\'bb \'bb\'fd\'bc\'ba\
+\
+- \'bb\'e7\'bf\'eb\'c7\'d2 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'c1\'be\'b7\'f9\'b8\'a6 \'bc\'b1\'c5\'c3\
+- \'c6\'c4\'c0\'cf\'c0\'bb \'c0\'fa\'c0\'e5\'c7\'d2 \'c7\'c1\'b7\'ce\'c1\'a7\'c6\'ae\'bf\'cd \'c6\'c4\'c0\'cf \'c0\'cc\'b8\'a7\'c0\'bb \'bc\'b3\'c1\'a4\
+\
+2. \'c8\'ad\'b8\'e9\'bf\'a1\'bc\'ad \'bf\'c0\'b8\'a5\'c2\'ca \'c5\'ac\'b8\'af \'c8\'c4 \'bb\'f5\'b7\'ce\'b8\'b8\'b5\'e9\'b1\'e2 -> \'c5\'d7\'c0\'cc\'ba\'ed\
+\
+- \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'bb \'bc\'b1\'c5\'c3\'c8\'c4 \'bf\'c0\'b8\'a5\'c2\'ca \'c5\'ac\'b8\'af \'c8\'c4 \'b8\'b8\'b5\'e9\'b0\'ed \'bd\'cd\'c0\'ba \'c5\'b0\'b5\'e9\'c0\'bb \'bb\'fd\'bc\'ba\
+\
+3. \'c5\'d7\'c0\'cc\'ba\'ed \'bc\'b1\'c5\'c3 \'c8\'c4 \'c6\'af\'bc\'ba \'c5\'ac\'b8\'af\
+\
+4. \'c6\'c4\'c0\'cf\'bf\'a1 \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'bb \'b5\'f0\'c0\'da\'c0\'ce\
+\
+5. [Window] - [Show View] - [eXERD] - [\'b8\'f0\'b5\'a8]\'c0\'bb \'bd\'c7\'c7\'e0\'c7\'cf\'b0\'ed \'bd\'ba\'c5\'b0\'b8\'b6\'c0\'c7 \'c0\'cc\'b8\'a7\'c0\'bb \'c0\'da\'bd\'c5\'c0\'c7 \'b0\'e8\'c1\'a4\'c0\'b8\'b7\'ce \'ba\'af\'b0\'e6\
+\
+6.. \'b9\'b0\'b8\'ae\'c0\'fb\'c0\'ce \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'bb \'bb\'fd\'bc\'ba\'c7\'cf\'b0\'ed\'c0\'da \'c7\'cf\'b8\'e9 \'b1\'d7 \'b6\'a7\'b4\'c2 [eXERD] \'b8\'de\'b4\'ba\'bf\'a1\'bc\'ad [\'c6\'f7\'bf\'f6\'b5\'e5 \'bf\'a3\'c1\'f6\'b4\'cf\'be\'ee\'b8\'b5]\'c0\'bb \'bc\'b1\'c5\'c3\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 ** Class Diagram\
+\
+- \'c5\'ac\'b7\'a1\'bd\'ba\'b5\'e9 \'bb\'e7\'c0\'cc\'c0\'c7 \'b0\'fc\'b0\'e8\'bf\'cd \'bc\'d3\'bc\'ba\'b5\'e9\'c0\'bb \'b4\'d9\'c0\'cc\'be\'ee\'b1\'d7\'b7\'a5\'c0\'b8\'b7\'ce \'c7\'a5\'c7\'f6\'c7\'d8\'bc\'ad \'be\'cb\'be\'c6\'ba\'b8\'b1\'e2\
+- Eclipse \'c7\'c3\'b7\'af\'b1\'d7\'c0\'ce : http://www.objectaid.com/update/current\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 - \'b4\'d9\'c0\'cc\'be\'ee\'b1\'d7\'b7\'a5 \'bb\'fd\'bc\'ba\
+- [File] - [New] - [Others] - [ObjectAid UML Diagram] - [Class Diagram]\
+\
+** MySQL \'b4\'d9\'bf\'ee\'b7\'ce\'b5\'e5\
+\
+- \'c1\'d6\'bc\'d2 : www.mysql.com\
+- Downloads -> MySQL Community Server 5.7.28(GPL \'b9\'f6\'c0\'fc- \'b9\'ab\'b7\'e1\'b7\'ce \'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'c2 \'b6\'f3\'c0\'cc\'bc\'be\'bd\'ba) -> DMG \'b4\'d9\'bf\'ee\'b7\'ce\'b5\'e5\
+\
+** Mac\'bf\'a1\'bc\'ad MySQL \'bc\'b3\'c4\'a1\
+\
+- \'b4\'d9\'bf\'ee\'b7\'ce\'b5\'e5 \'b9\'de\'c0\'ba \'c6\'c4\'c0\'cf\'c0\'bb \'b4\'f5\'ba\'ed \'c5\'ac\'b8\'af\'c7\'d8\'bc\'ad \'bc\'b3\'c4\'a1\
+- \'bc\'b3\'c4\'a1\'b0\'a1 \'bf\'cf\'b7\'e1\'b5\'c7\'b8\'e9 \'b0\'fc\'b8\'ae\'c0\'da \'ba\'f1\'b9\'d0\'b9\'f8\'c8\'a3\'b8\'a6 \'b4\'eb\'c8\'ad\'bb\'f3\'c0\'da\'bf\'a1 \'c3\'e2\'b7\'c2\'c7\'cf\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1 \'bc\'b3\'c4\'a1\'b0\'a1 \'bf\'cf\'b7\'e1\'b5\'c8 \'b0\'e6\'bf\'ec \'b0\'fc\'b8\'ae\'c0\'da \'ba\'f1\'b9\'d0\'b9\'f8\'c8\'a3\'b8\'a6 \'b8\'de\'b8\'f0\
+- \'c0\'a9\'b5\'b5\'bf\'ec\'c1\'ee\'bf\'eb\'c0\'ba \'ba\'f1\'b9\'d0\'b9\'f8\'c8\'a3\'b8\'a6 \'c1\'f7\'c1\'a2 \'bc\'b3\'c1\'a4\'c7\'d5\'b4\'cf\'b4\'d9.\
+\
+s53bq0Jpss.u\
+1. \'b0\'fc\'b8\'ae\'c0\'da \'ba\'f1\'b9\'d0\'b9\'f8\'c8\'a3 \'ba\'af\'b0\'e6\
+\
+1) \'bd\'c3\'bd\'ba\'c5\'db \'c8\'af\'b0\'e6\'bc\'b3\'c1\'a4\'bf\'a1\'bc\'ad MySQL \'bc\'ad\'ba\'f1\'bd\'ba\'b8\'a6 \'b1\'b8\'b5\'bf\
+\
+- running \'b5\'c7\'b0\'ed \'c0\'d6\'b4\'c2\'c1\'f6 \'c8\'ae\'c0\'ce(Stop \'c0\'cc\'b8\'e9 \'bf\'b7\'bf\'a1 running MySQL Server\'b8\'a6 \'c5\'ac\'b8\'af)\
+\
+2) \'c5\'cd\'b9\'cc\'b3\'ce\'c0\'bb \'bd\'c7\'c7\'e0\'bd\'c3\'c4\'d1\'bc\'ad mysql \'b8\'ed\'b7\'c9\'be\'ee \'b5\'f0\'b7\'ba\'c5\'e4\'b8\'ae\'b7\'ce \'c0\'cc\'b5\'bf\
+\
+- cd /usr/local/mysql/bin\
+\
+3) \'b0\'fc\'b8\'ae\'c0\'da\'b7\'ce \'b7\'ce\'b1\'d7\'c0\'ce\
+\
+./mysql -u root -p\
+\'b0\'fc\'b8\'ae\'c0\'da \'ba\'f1\'b9\'d0\'b9\'f8\'c8\'a3 \'c0\'d4\'b7\'c2\
+\
+- \'b0\'fc\'b8\'ae\'c0\'da \'ba\'f1\'b9\'d0\'b9\'f8\'c8\'a3\'b0\'a1 \'b8\'c2\'b4\'c2\'b5\'a5\'b5\'b5 \'b0\'e8\'bc\'d3 \'b7\'ce\'b1\'d7\'c0\'ce \'be\'c8\'b5\'c7\'b8\'e9 Server\'b8\'a6 Stop\'c7\'cf\'b0\'ed \'b4\'d9\'bd\'c3 Start\'b8\'a6 \'c7\'cf\'b8\'e9 \'b5\'ca.\
+\
+4) \'b0\'fc\'b8\'ae\'c0\'da \'ba\'f1\'b9\'d0\'b9\'f8\'c8\'a3 \'ba\'af\'b0\'e6\
+\
+- alter user \'a1\'aeroot\'a1\'af@\'a1\'aelocalhost\'a1\'af identified by \'a1\'ae\'bb\'f5\'b7\'ce\'bf\'ee\'ba\'f1\'b9\'d0\'b9\'f8\'c8\'a3\'a1\'af;\
+- flush privileges;\
+\
+2. DBeaver\'bf\'a1\'bc\'ad \'c1\'a2\'bc\'d3\
+\
+- \'c1\'a2\'bc\'d3\'c7\'d2 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'b5\'e5\'b6\'f3\'c0\'cc\'b9\'f6 : oracle\'c0\'bb \'c1\'a6\'bf\'dc\'c7\'cf\'b0\'ed\'b4\'c2 \'b9\'d8\'bf\'a1 \'bb\'e7\'c0\'cc\'c6\'ae\'bf\'a1 \'b4\'d9 \'c0\'d6\'c0\'bd.\
+- www.mvnrepository.com\'bf\'a1\'bc\'ad \'b4\'d9\'bf\'ee\'b7\'ce\'b5\'e5 \'b0\'a1\'b4\'c9 - mysql\'b7\'ce \'b0\'cb\'bb\'f6 - mysql connector/j - 5.1.48 Click - jar Click\
+\
+- \'c1\'a2\'bc\'d3\'c7\'d2 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba URL : mysql\'c0\'ba \'b1\'e2\'ba\'bb\'c0\'fb\'c0\'b8\'b7\'ce 3306\'b9\'f8 \'c6\'f7\'c6\'ae\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'b0\'ed mysql\'c0\'cc\'b6\'f3\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'b8\'a6 \'bc\'d2\'c0\'af\
+- \'b0\'e8\'c1\'a4\'b0\'fa \'ba\'f1\'b9\'d0\'b9\'f8\'c8\'a3\
+\
+3. \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'b0\'fc\'b7\'c3 \'b8\'ed\'b7\'c9\
+\
+- mysql\'c0\'ba \'c1\'a2\'bc\'d3\'b4\'dc\'c0\'a7\'b0\'a1 database\
+- \'b1\'e2\'ba\'bb\'c0\'fb\'c0\'b8\'b7\'ce mysql\'c0\'cc\'b6\'f3\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'b0\'a1 root\'bf\'a1\'b0\'d4 \'c1\'a6\'b0\'f8\
+\
+1) \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'bb\'fd\'bc\'ba \'b8\'ed\'b7\'c9\
+\
+create database \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'c0\'cc\'b8\'a7;\
+\
+2) \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'bb\'e7\'bf\'eb\
+\
+use \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'c0\'cc\'b8\'a7;\
+\
+3) \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'c8\'ae\'c0\'ce\
+\
+show databases;\
+\
+4) \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'bb\'e8\'c1\'a6\
+\
+drop databases \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'c0\'cc\'b8\'a7;\
+\
+4. sample.sql\'c0\'bb \'b4\'d9\'bf\'ee\'b7\'ce\'b5\'e5 \'b9\'de\'be\'c6\'bc\'ad \'bb\'f9\'c7\'c3 \'b5\'a5\'c0\'cc\'c5\'cd \'bb\'fd\'bc\'ba\
+\
+\'bd\'c7\'bd\'c0)\
+\pard\pardeftab720\partightenfactor0
+\cf7 -- mysql \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'bb\'e7\'bf\'eb\cf0 \
+\cf8 USE\cf9  \cf10 mysql\cf11 ;\cf0 \
+\
+\cf7 -- \'c8\'b8\'bf\'f8\'c5\'d7\'c0\'cc\'ba\'ed\cf0 \
+\cf8 create\cf9  \cf8 table\cf9  \cf10 usertbl(\cf0 \
+\cf10 userid\cf9  \cf12 char\cf10 (\cf13 15\cf10 )\cf9  \cf8 not\cf9  \cf8 null\cf9  \cf8 primary\cf9  \cf8 key\cf10 ,\cf0 \
+\cf10 name\cf9  \cf12 varchar\cf10 (\cf13 20\cf10 )\cf9  \cf8 not\cf9  \cf8 null\cf10 ,\cf0 \
+\cf10 birthyear\cf9  \cf12 int\cf9  \cf8 not\cf9  \cf8 null\cf10 ,\cf9  \cf0 \
+\cf10 addr\cf9  \cf12 char\cf10 (\cf13 100\cf10 ),\cf0 \
+\cf10 mobile\cf9  \cf12 char\cf10 (\cf13 11\cf10 ),\cf0 \
+\cf10 mdate\cf9  \cf12 date\cf10 )ENGINE=MyISAM\cf9  \cf8 AUTO_INCREMENT\cf10 =\cf13 1\cf9  \cf8 DEFAULT\cf9  \cf10 CHARSET=utf8\cf11 ;\cf0 \
+\
+\cf7 -- \'b1\'b8\'b8\'c5\'c5\'d7\'c0\'cc\'ba\'ed\cf0 \
+\cf8 create\cf9  \cf8 table\cf9  \cf10 buytbl(\cf0 \
+\cf10 num\cf9  \cf12 int\cf9  \cf8 auto_increment\cf9  \cf8 primary\cf9  \cf8 key\cf10 ,\cf0 \
+\cf10 userid\cf9  \cf12 char\cf10 (\cf13 8\cf10 )\cf9  \cf8 not\cf9  \cf8 null\cf10 ,\cf0 \
+\cf10 productname\cf9  \cf12 char\cf10 (\cf13 10\cf10 ),\cf0 \
+\cf10 groupname\cf9  \cf12 char\cf10 (\cf13 10\cf10 ),\cf0 \
+\cf10 price\cf9  \cf12 int\cf9  \cf8 not\cf9  \cf8 null\cf10 ,\cf0 \
+\cf10 amount\cf9  \cf12 int\cf9  \cf8 not\cf9  \cf8 null\cf10 ,\cf0 \
+\cf8 foreign\cf9  \cf8 key\cf9  \cf10 (userid)\cf9  \cf8 references\cf9  \cf10 usertbl(userid)\cf9  \cf8 on\cf9  \cf8 delete\cf9  \cf8 cascade\cf10 )ENGINE=MyISAM\cf9  \cf8 AUTO_INCREMENT\cf10 =\cf13 1\cf9  \cf8 DEFAULT\cf9  \cf10 CHARSET=utf8\cf11 ;\cf0 \
+\
+\cf7 -- \'b5\'a5\'c0\'cc\'c5\'cd \'bb\'f0\'c0\'d4\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 usertbl\cf9  \cf8 values\cf10 (\cf14 'kty'\cf10 ,\cf9  \cf14 '\'b1\'e8\'c5\'c2\'bf\'ac'\cf10 ,\cf13 1989\cf10 ,\cf14 '\'c0\'fc\'c1\'d6'\cf10 ,\cf14 '01011111111'\cf10 ,\cf9  \cf14 '1989-3-9'\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 usertbl\cf9  \cf8 values\cf10 (\cf14 'bsj'\cf10 ,\cf9  \cf14 '\'b9\'e8\'bc\'f6\'c1\'f6'\cf10 ,\cf13 1994\cf10 ,\cf14 '\'b1\'a4\'c1\'d6'\cf10 ,\cf14 '01022222222'\cf10 ,\cf9  \cf14 '1994-10-10'\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 usertbl\cf9  \cf8 values\cf10 (\cf14 'ksh'\cf10 ,\cf9  \cf14 '\'b1\'e8\'bc\'b3\'c7\'f6'\cf10 ,\cf13 1995\cf10 ,\cf14 '\'ba\'ce\'c3\'b5'\cf10 ,\cf14 '01033333333'\cf10 ,\cf9  \cf14 '1995-1-3'\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 usertbl\cf9  \cf8 values\cf10 (\cf14 'bjh'\cf10 ,\cf9  \cf14 '\'b9\'e8\'c1\'d6\'c7\'f6'\cf10 ,\cf13 1991\cf10 ,\cf14 '\'b4\'eb\'b1\'b8'\cf10 ,\cf14 '01044444444'\cf10 ,\cf9  \cf14 '1991-3-29'\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 usertbl\cf9  \cf8 values\cf10 (\cf14 'ghr'\cf10 ,\cf9  \cf14 '\'b1\'b8\'c7\'cf\'b6\'f3'\cf10 ,\cf13 1991\cf10 ,\cf14 '\'b1\'a4\'c1\'d6'\cf10 ,\cf14 '01055555555'\cf10 ,\cf9  \cf14 '1991-1-13'\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 usertbl\cf9  \cf8 values\cf10 (\cf14 'san'\cf10 ,\cf9  \cf14 '\'bb\'ea\'b4\'d9\'b6\'f3\'b9\'da'\cf10 ,\cf13 1984\cf10 ,\cf14 '\'ba\'ce\'bb\'ea'\cf10 ,\cf14 '01066666666'\cf10 ,\cf9  \cf14 '1984-11-12'\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 usertbl\cf9  \cf8 values\cf10 (\cf14 'jsm'\cf10 ,\cf9  \cf14 '\'c0\'fc\'bc\'d2\'b9\'cc'\cf10 ,\cf13 2001\cf10 ,\cf14 '\'c4\'b3\'b3\'aa\'b4\'d9'\cf10 ,\cf14 '01077777777'\cf10 ,\cf9  \cf14 '2001-3-9'\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 usertbl\cf9  \cf8 values\cf10 (\cf14 'lhl'\cf10 ,\cf9  \cf14 '\'c0\'cc\'c8\'bf\'b8\'ae'\cf10 ,\cf13 1979\cf10 ,\cf14 '\'bc\'ad\'bf\'ef'\cf10 ,\cf14 '01088888888'\cf10 ,\cf9  \cf14 '1979-5-10'\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 usertbl\cf9  \cf8 values\cf10 (\cf14 'iyou'\cf10 ,\cf9  \cf14 '\'be\'c6\'c0\'cc\'c0\'af'\cf10 ,\cf13 1993\cf10 ,\cf14 '\'bc\'ad\'bf\'ef'\cf10 ,\cf14 '01099999999'\cf10 ,\cf9  \cf14 '1993-5-19'\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 usertbl\cf9  \cf8 values\cf10 (\cf14 'ailee'\cf10 ,\cf9  \cf14 '\'bf\'a1\'c0\'cf\'b8\'ae'\cf10 ,\cf13 1989\cf10 ,\cf14 '\'b9\'cc\'b1\'b9'\cf10 ,\cf14 '01000000000'\cf10 ,\cf9  \cf14 '1989-5-30'\cf10 )\cf11 ;\cf0 \
+\
+\cf8 commit\cf11 ;\cf0 \
+\
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'kty'\cf10 ,\cf9  \cf14 '\'bf\'ee\'b5\'bf\'c8\'ad'\cf10 ,\cf9  \cf14 '\'c0\'e2\'c8\'ad'\cf10 ,\cf9  \cf13 30\cf10 ,\cf9  \cf13 2\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'kty'\cf10 ,\cf9  \cf14 '\'b3\'eb\'c6\'ae\'ba\'cf'\cf10 ,\cf9  \cf14 '\'c0\'fc\'c0\'da'\cf10 ,\cf9  \cf13 1000\cf10 ,\cf9  \cf13 1\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'jsm'\cf10 ,\cf9  \cf14 '\'bf\'ee\'b5\'bf\'c8\'ad'\cf10 ,\cf9  \cf14 '\'c0\'e2\'c8\'ad'\cf10 ,\cf9  \cf13 30\cf10 ,\cf9  \cf13 1\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'lhl'\cf10 ,\cf9  \cf14 '\'b8\'f0\'b4\'cf\'c5\'cd'\cf10 ,\cf9  \cf14 '\'c0\'fc\'c0\'da'\cf10 ,\cf9  \cf13 200\cf10 ,\cf9  \cf13 1\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'bsj'\cf10 ,\cf9  \cf14 '\'b8\'f0\'b4\'cf\'c5\'cd'\cf10 ,\cf9  \cf14 '\'c0\'fc\'c0\'da'\cf10 ,\cf9  \cf13 200\cf10 ,\cf9  \cf13 1\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'kty'\cf10 ,\cf9  \cf14 '\'c3\'bb\'b9\'d9\'c1\'f6'\cf10 ,\cf9  \cf14 '\'c0\'e2\'c8\'ad'\cf10 ,\cf9  \cf13 100\cf10 ,\cf9  \cf13 1\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'lhl'\cf10 ,\cf9  \cf14 '\'c3\'a5'\cf10 ,\cf9  \cf14 '\'bc\'ad\'c0\'fb'\cf10 ,\cf9  \cf13 15\cf10 ,\cf9  \cf13 2\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'iyou'\cf10 ,\cf9  \cf14 '\'c3\'a5'\cf10 ,\cf9  \cf14 '\'bc\'ad\'c0\'fb'\cf10 ,\cf9  \cf13 15\cf10 ,\cf9  \cf13 7\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'iyou'\cf10 ,\cf9  \cf14 '\'c4\'c4\'c7\'bb\'c5\'cd'\cf10 ,\cf9  \cf14 '\'c0\'fc\'c0\'da'\cf10 ,\cf9  \cf13 500\cf10 ,\cf9  \cf13 1\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'bsj'\cf10 ,\cf9  \cf14 '\'b3\'eb\'c6\'ae\'ba\'cf'\cf10 ,\cf9  \cf14 '\'c0\'fc\'c0\'da'\cf10 ,\cf9  \cf13 1000\cf10 ,\cf9  \cf13 1\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'bjh'\cf10 ,\cf9  \cf14 '\'b8\'de\'b8\'f0\'b8\'ae'\cf10 ,\cf9  \cf14 '\'c0\'fc\'c0\'da'\cf10 ,\cf9  \cf13 50\cf10 ,\cf9  \cf13 4\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'ailee'\cf10 ,\cf9  \cf14 '\'bf\'ee\'b5\'bf\'c8\'ad'\cf10 ,\cf9  \cf14 '\'c0\'e2\'c8\'ad'\cf10 ,\cf9  \cf13 30\cf10 ,\cf9  \cf13 2\cf10 )\cf11 ;\cf0 \
+\cf8 insert\cf9  \cf8 into\cf9  \cf10 buytbl\cf9  \cf8 values\cf10 (\cf8 null\cf10 ,\cf9  \cf14 'ghr'\cf10 ,\cf9  \cf14 '\'bf\'ee\'b5\'bf\'c8\'ad'\cf10 ,\cf9  \cf14 '\'c0\'e2\'c8\'ad'\cf10 ,\cf9  \cf13 30\cf10 ,\cf9  \cf13 1\cf10 )\cf11 ;\cf0 \
+\
+\cf8 commit\cf11 ;\cf0 \
+\
+\cf8 SELECT\cf9  \cf10 *\cf9  \cf8 FROM\cf9  \cf10 usertbl\cf11 ;\cf0 \
+\cf8 SELECT\cf9  \cf10 *\cf9  \cf8 FROM\cf9  \cf10 buytbl\cf11 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+5. SQL(Structured Query Language)\
+\
+- \'b0\'fc\'b0\'e8\'c7\'fc \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1 \'c0\'db\'be\'f7\'c0\'bb \'bc\'f6\'c7\'e0\'c7\'cf\'b5\'b5\'b7\'cf \'c7\'d8\'c1\'d6\'b4\'c2 \'b1\'b8\'c1\'b6\'c0\'fb \'c1\'fa\'c0\'c7 \'be\'f0\'be\'ee\
+\
+1) DQL(Data Query Language)\
+\
+- \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1\'bc\'ad \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c1\'b6\'c8\'b8\'c7\'d2 \'b6\'a7 \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2 \'b8\'ed\'b7\'c9\'be\'ee\
+- select\
+\
+2) DML(Data Manipulation Language)\
+\
+- \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'bb\'f0\'c0\'d4\'c7\'cf\'b0\'ed \'bc\'f6\'c1\'a4\'c7\'cf\'b0\'ed \'bb\'e8\'c1\'a6\'c7\'cf\'b4\'c2 \'b8\'ed\'b7\'c9\'be\'ee\
+- insert, update, delete\
+\
+3) TCL(Transaction Control Language)\
+\
+- \'c7\'f6\'c0\'e7\'b1\'ee\'c1\'f6 \'bc\'f6\'c7\'e0\'c7\'d1 \'c6\'ae\'b7\'a3\'c0\'e8\'bc\'c7\'c0\'c7 \'c0\'db\'be\'f7\'c0\'bb \'bf\'cf\'b7\'e1\'c7\'cf\'b0\'c5\'b3\'aa \'c3\'eb\'bc\'d2\'c7\'cf\'b4\'c2 \'b8\'ed\'b7\'c9\'be\'ee\
+- commit, rollback, savepoint\
+\
+4) DDL(Data Definition Language)\
+\
+- \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba \'b0\'b3\'c3\'bc\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'cf\'b0\'ed \'b1\'b8\'c1\'b6\'b8\'a6 \'ba\'af\'b0\'e6\'c7\'cf\'b0\'ed \'bb\'e8\'c1\'a6\'c7\'cf\'b4\'c2 \'b8\'ed\'b7\'c9\'be\'ee\
+- create, alter, drop, truncate\
+\
+5) DCL(Data Control Language)\
+\
+- \'b5\'a5\'c0\'cc\'c5\'cd\'ba\'a3\'c0\'cc\'bd\'ba\'bf\'a1 \'b1\'c7\'c7\'d1\'c0\'bb \'ba\'ce\'bf\'a9\'c7\'cf\'b0\'ed \'c3\'eb\'bc\'d2\'c7\'cf\'b4\'c2 \'b8\'ed\'b7\'c9\'be\'ee\
+- grant, revoke\
+\
+6. Select \
+\
+1) select \'b1\'b8\'c1\'b6\
+select		\'c1\'b6\'c8\'b8\'c7\'d2 \'c4\'c3\'b7\'b3\'c0\'cc\'b3\'aa \'bf\'ac\'bb\'ea\'bd\'c4\
+from		\'c1\'b6\'c8\'b8\'c7\'d2 \'c5\'d7\'c0\'cc\'ba\'ed \'c0\'cc\'b8\'a7\
+where	\'c1\'b6\'c8\'b8\'c7\'d2 \'c1\'b6\'b0\'c7\
+group by	\'b1\'d7\'b7\'ec\'c8\'ad \'c7\'d2 \'c4\'c3\'b7\'b3\'c0\'cc\'b3\'aa \'bf\'ac\'bb\'ea\'bd\'c4\
+having	\'b1\'d7\'b7\'ec\'c8\'ad \'c7\'d1 \'c0\'cc\'c8\'c4\'bf\'a1 \'c3\'df\'b0\'a1\'c7\'d2 \'c1\'b6\'b0\'c7\
+order by	\'c1\'a4\'b7\'c4\'c7\'d2 \'c4\'c3\'b7\'b3\'c0\'cc\'b3\'aa \'bf\'ac\'bb\'ea\'bd\'c4\
+\
+- select \'bf\'cd from \'c0\'ba \'c7\'ca\'bc\'f6\
+- \'bd\'c7\'c7\'e0 \'bc\'f8\'bc\'ad\'b4\'c2 from -> where -> group by -> having -> select -> order by\
+\
+2) \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'c7 \'c0\'fc\'c3\'bc \'b5\'a5\'c0\'cc\'c5\'cd \'c1\'b6\'c8\'b8\
+\
+select * from \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'cc\'b8\'a7;\
+\
+=> userbl \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'c7 \'b8\'f0\'b5\'e7 \'b5\'a5\'c0\'cc\'c5\'cd\'b8\'a6 \'c1\'b6\'c8\'b8\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf8 SELECT
+\f0\b0 \cf9  \cf10 *\cf9  
+\f1\b \cf8 FROM
+\f0\b0 \cf9  \cf10 usertbl\cf11 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+3) \'c6\'af\'c1\'a4 \'c4\'c3\'b7\'b3\'b8\'b8 \'c1\'b6\'c8\'b8\
+\
+select \'c4\'c3\'b7\'b3\'c0\'cc\'b8\'a7 \'b3\'aa\'bf\'ad\
+from \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'cc\'b8\'a7;\
+\
+- userbl \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1\'bc\'ad userid\'bf\'cd name \'c4\'c3\'b7\'b3\'b8\'b8 \'c1\'b6\'c8\'b8\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf8 SELECT
+\f0\b0 \cf9  \cf10 userid,\cf9  \cf10 name\cf0 \
+
+\f1\b \cf8 FROM
+\f0\b0 \cf9  \cf10 usertbl\cf11 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 kty	\'b1\'e8\'c5\'c2\'bf\'ac\
+bsj	\'b9\'e8\'bc\'f6\'c1\'f6\
+ksh	\'b1\'e8\'bc\'b3\'c7\'f6\
+bjh	\'b9\'e8\'c1\'d6\'c7\'f6\
+ghr	\'b1\'b8\'c7\'cf\'b6\'f3\
+san	\'bb\'ea\'b4\'d9\'b6\'f3\'b9\'da\
+jsm	\'c0\'fc\'bc\'d2\'b9\'cc\
+lhl	\'c0\'cc\'c8\'bf\'b8\'ae\
+iyou	\'be\'c6\'c0\'cc\'c0\'af\
+ailee	\'bf\'a1\'c0\'cf\'b8\'ae\
+\
+4) \'bf\'ac\'bb\'ea\'bd\'c4 \'c1\'b6\'c8\'b8\
+\
+select \'bf\'ac\'bb\'ea\'bd\'c4\
+from \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'cc\'b8\'a7;\
+\
+- buytbl \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1\'bc\'ad userid \'c4\'c3\'b7\'b3\'b0\'fa price*amount \'c0\'c7 \'b0\'aa\'c0\'bb \'c1\'b6\'c8\'b8\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf8 SELECT
+\f0\b0 \cf9  \cf10 userid,\cf9  \cf10 price*amount\cf0 \
+
+\f1\b \cf8 FROM
+\f0\b0 \cf9  \cf10 buytbl\cf11 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 kty	60\
+kty	1000\
+jsm	30\
+lhl	200\
+bsj	200\
+kty	100\
+lhl	30\
+iyou	105\
+iyou	500\
+bsj	1000\
+bjh	200\
+ailee	60\
+ghr	30\
+\
+5) \'bf\'ac\'bb\'ea\'bd\'c4\'c0\'cc\'b3\'aa \'b1\'d7\'b7\'ec\'c7\'d4\'bc\'f6\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'b0\'d4 \'b5\'c7\'b8\'e9 \'c4\'c3\'b7\'b3\'c0\'cc\'b8\'a7\'c0\'cc \'bf\'ac\'bb\'ea\'bd\'c4\'c0\'cc\'b3\'aa \'b1\'d7\'b7\'ec \'c7\'d4\'bc\'f6\'c0\'cc\'b8\'a7\'c0\'b8\'b7\'ce \'c3\'e2\'b7\'c2\'c0\'cc \'b5\'cb\'b4\'cf\'b4\'d9.\
+\'b0\'f8\'b9\'e9\'c0\'bb \'c7\'d1\'b0\'b3 \'c1\'d6\'b0\'ed \'ba\'b0\'b8\'ed\'c0\'bb \'c0\'d4\'b7\'c2\'c7\'d8\'bc\'ad \'ba\'b0\'b8\'ed\'c0\'bb \'c3\'e2\'b7\'c2\'c7\'cf\'b4\'c2 \'b0\'cd\'c0\'cc \'ba\'b8\'b1\'e2\'bf\'a1 \'c1\'c1\'bd\'c0\'b4\'cf\'b4\'d9.\
+\
+6) distinct\
+\
+- select \'c0\'fd\'bf\'a1 \'b8\'c7 \'be\'d5\'bf\'a1 \'bb\'e7\'bf\'eb\'c7\'d8\'bc\'ad \'c1\'df\'ba\'b9\'c0\'bb \'c1\'a6\'b0\'c5\'c7\'d8\'c1\'d6\'b4\'c2 \'b8\'ed\'b7\'c9\'be\'ee\
+- buytbl \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1\'bc\'ad userid\'b8\'a6 \'c1\'df\'ba\'b9\'be\'f8\'c0\'cc \'c3\'e2\'b7\'c2\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf8 SELECT
+\f0\b0 \cf9  
+\f1\b \cf8 DISTINCT
+\f0\b0 \cf9  \cf10 userid\cf0 \
+
+\f1\b \cf8 FROM
+\f0\b0 \cf9  \cf10 buytbl\cf11 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 ailee\
+bjh\
+bsj\
+ghr\
+iyou\
+jsm\
+kty\
+lhl\
+\
+7. where \'c0\'fd\
+\
+- \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1\'bc\'ad \'c1\'b6\'b0\'c7\'c0\'bb \'c0\'fb\'bf\'eb\'c7\'d8\'bc\'ad \'c7\'e0 \'b4\'dc\'c0\'a7\'b7\'ce \'ba\'d0\'b8\'ae\'c7\'cf\'b4\'c2 \'c0\'fd\
+- >, >=, <, <=, =, !=(<>) \'bf\'ac\'bb\'ea\'c0\'da\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'d8\'bc\'ad \'c5\'a9\'b1\'e2 \'ba\'f1\'b1\'b3\'b3\'aa \'b5\'bf\'c0\'cf\'bc\'ba \'bf\'a9\'ba\'ce\'b8\'a6 \'ba\'f1\'b1\'b3 \'b0\'a1\'b4\'c9\
+- \'b3\'af\'c2\'a5\'b3\'aa \'b9\'ae\'c0\'da\'b5\'b5 \'c5\'a9\'b1\'e2 \'ba\'f1\'b1\'b3\'b0\'a1 \'b0\'a1\'b4\'c9\
+- \'b3\'af\'c2\'a5\'b4\'c2 \'c1\'a4\'bc\'f6\'bf\'cd \'bb\'ea\'bc\'fa\'bf\'ac\'bb\'ea\'c0\'cc \'b0\'a1\'b4\'c9\'c7\'cf\'b8\'e9 \'b3\'af\'c2\'a5\'b3\'a2\'b8\'ae \'bb\'ac\'bc\'c0\'b5\'b5 \'b0\'a1\'b4\'c9\
+- \'b9\'ae\'c0\'da\'b8\'a6 \'c0\'d4\'b7\'c2\'c7\'d2 \'b6\'a7\'b4\'c2 \'c0\'db\'c0\'ba \'b5\'fb\'bf\'c8\'c7\'a5 \'be\'c8\'bf\'a1 \'c0\'d4\'b7\'c2\
+- usertbl \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1\'bc\'ad userid\'b0\'a1 kty\'c0\'ce \'b5\'a5\'c0\'cc\'c5\'cd\'c0\'c7 userid\'bf\'cd mdate\'b8\'a6 \'c1\'b6\'c8\'b8\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf8 SELECT
+\f0\b0 \cf9  \cf10 userid,\cf9  \cf10 mdate\cf0 \
+
+\f1\b \cf8 FROM
+\f0\b0 \cf9  \cf10 usertbl\cf0 \
+
+\f1\b \cf8 where
+\f0\b0 \cf9  \cf10 userid=\cf14 'kty'\cf11 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 kty	1989-03-09\
+\
+- mysql\'c0\'ba \'b3\'af\'c2\'a5\'b8\'a6 \'b8\'b8\'b5\'e9 \'b6\'a7 \'c0\'cf\'b9\'dd\'c0\'fb\'c0\'ce \'b3\'af\'c2\'a5 \'c7\'fc\'bd\'c4\'c0\'c7 \'b9\'ae\'c0\'da\'bf\'ad \'b0\'a1\'b4\'c9\
+\
+- and \'bf\'cd or\'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'d8\'bc\'ad 2\'b0\'b3\'c0\'c7 \'c1\'b6\'b0\'c7\'c0\'bb \'b9\'ad\'c0\'bb \'bc\'f6 \'c0\'d6\'bd\'c0\'b4\'cf\'b4\'d9.\
+\
+- between a and b \'b8\'a6 \'c0\'cc\'bf\'eb\'c7\'d8\'bc\'ad a\'bf\'a1\'bc\'ad b \'bb\'e7\'c0\'cc\'c0\'c7 \'b5\'a5\'c0\'cc\'c5\'cd\'c1\'b6\'c8\'b8 \'b0\'a1\'b4\'c9\
+\
+- usertbl \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1\'bc\'ad birthyear \'b0\'a1 1990 \'ba\'b8\'b4\'d9 \'c5\'a9\'b0\'c5\'b3\'aa \'b0\'b0\'b0\'ed addr \'c0\'cc \'bc\'ad\'bf\'ef\'c0\'ce \'b5\'a5\'c0\'cc\'c5\'cd\'c0\'c7 \'b8\'f0\'b5\'e7 \'c4\'c3\'b7\'b3\'c0\'bb \'c1\'b6\'c8\'b8\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf8 SELECT
+\f0\b0 \cf9  \cf10 *\cf9  
+\f1\b \cf8 FROM
+\f0\b0 \cf9  \cf10 usertbl\cf0 \
+
+\f1\b \cf8 WHERE
+\f0\b0 \cf9  \cf10 birthyear\cf9  \cf10 >=\cf9  \cf13 1990\cf9  
+\f1\b \cf8 and
+\f0\b0 \cf9  \cf10 addr\cf9  \cf10 =\cf9  \cf14 '\'bc\'ad\'bf\'ef'\cf11 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 iyou	\'be\'c6\'c0\'cc\'c0\'af	1993	\'bc\'ad\'bf\'ef	01099999999	1993-05-19\
+\
+- usertbl \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1\'bc\'ad birthyear \'b0\'a1 1990 \'bf\'a1\'bc\'ad 1993 \'c0\'ce \'b5\'a5\'c0\'cc\'c5\'cd\'c0\'c7 \'b8\'f0\'b5\'e7 \'c4\'c3\'b7\'b3\'c0\'bb \'c1\'b6\'c8\'b8\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf8 SELECT
+\f0\b0 \cf9  \cf10 *\cf9  
+\f1\b \cf8 FROM
+\f0\b0 \cf9  \cf10 usertbl\cf0 \
+
+\f1\b \cf8 where
+\f0\b0 \cf9  \cf10 birthyear\cf9  \cf10 >=\cf9  \cf13 1990\cf9  
+\f1\b \cf8 and
+\f0\b0 \cf9  \cf10 birthyear\cf9  \cf10 <=\cf9  \cf13 1993\cf11 ;\cf0 \
+\
+
+\f1\b \cf8 SELECT
+\f0\b0 \cf9  \cf10 *\cf9  
+\f1\b \cf8 FROM
+\f0\b0 \cf9  \cf10 usertbl\cf0 \
+
+\f1\b \cf8 WHERE
+\f0\b0 \cf9  \cf10 birthyear\cf9  
+\f1\b \cf8 BETWEEN
+\f0\b0 \cf9  \cf13 1990\cf9  
+\f1\b \cf8 AND
+\f0\b0 \cf9  \cf13 1993\cf11 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 bjh	\'b9\'e8\'c1\'d6\'c7\'f6	1991	\'b4\'eb\'b1\'b8	01044444444	1991-03-29\
+ghr	\'b1\'b8\'c7\'cf\'b6\'f3	1991	\'b1\'a4\'c1\'d6	01055555555	1991-01-13\
+iyou	\'be\'c6\'c0\'cc\'c0\'af	1993	\'bc\'ad\'bf\'ef	01099999999	1993-05-19\
+\
+- in \'bf\'ac\'bb\'ea\'c0\'da\
+\
+- \'bf\'a9\'b7\'af\'b0\'b3 \'c1\'df\'bf\'a1\'bc\'ad \'c7\'cf\'b3\'aa\'c0\'c7 \'b0\'aa\'b0\'fa\'b8\'b8 \'c0\'cf\'c4\'a1\'c7\'cf\'b4\'c2 \'b5\'a5\'c0\'cc\'c5\'cd \'c1\'b6\'c8\'b8\
+- usertbl \'c5\'d7\'c0\'cc\'ba\'ed\'bf\'a1\'bc\'ad addr\'c0\'cc \'bc\'ad\'bf\'ef\'c0\'cc\'b0\'c5\'b3\'aa \'b4\'eb\'b1\'b8\'c0\'ce \'b5\'a5\'c0\'cc\'c5\'cd\'c0\'c7 \'b8\'f0\'b5\'e7 \'c4\'c3\'b7\'b3\'c0\'bb \'c1\'b6\'c8\'b8\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf8 SELECT
+\f0\b0 \cf9  \cf10 *\cf9  
+\f1\b \cf8 FROM
+\f0\b0 \cf9  \cf10 usertbl\cf0 \
+
+\f1\b \cf8 WHERE
+\f0\b0 \cf9  \cf10 addr\cf9  
+\f1\b \cf8 IN
+\f0\b0 \cf10 (\cf14 '\'bc\'ad\'bf\'ef'\cf10 ,\cf9  \cf14 '\'b4\'eb\'b1\'b8'\cf10 )\cf11 ;\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 bjh	\'b9\'e8\'c1\'d6\'c7\'f6	1991	\'b4\'eb\'b1\'b8	01044444444	1991-03-29\
+lhl	\'c0\'cc\'c8\'bf\'b8\'ae	1979	\'bc\'ad\'bf\'ef	01088888888	1979-05-10\
+iyou	\'be\'c6\'c0\'cc\'c0\'af	1993	\'bc\'ad\'bf\'ef	01099999999	1993-05-19}
